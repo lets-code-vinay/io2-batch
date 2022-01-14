@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>listing & internal styling</title>
+  </head>
+  <!--Inernal styling-->
+  <!--class ->  .  -->
+  <!--  Id  ->  #  -->
+  <!-- Tag  ->  tag -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .main-div {
+      background-color: black;
+      color: whitesmoke;
+      height: 95vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .main-h2 {
+      background-color: yellow;
+      color: black;
+      border: 3px dotted red;
+      border-radius: 20px;
+      width: 30%;
+      margin-left: 30%;
+      padding: 0px 0px 5px 20px;
+    }
+    #subjects {
+      background-color: violet;
+      color: blue;
+      border: 3px dashed yellow;
+      padding: 10px;
+      margin-left: 20%;
+      width: 30%;
+      border-radius: 20px;
+    }
+    span {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div class="main-div">
+      <h2 class="main-h2">I'm learning Listing and internal styling</h2>
+      <div id="subjects" class="list-division">
+        <h3 class="subject-heading">My favorite subjects</h3>
+        <!--
+            ul == unorder list
+        It is used to create list with bullets
+        -->
+        <ul class="unorder-list">
+          <!--li == list-->
+          <li class="list" id="html">HTML</li>
+          <li class="list" id="css">CSS</li>
+          <li class="list" id="bootstrap">Bootstrap</li>
+          <li class="list" id="javasript">Javascript</li>
+          <li class="list" id="es6">ES6</li>
+          <li class="list" id="reactjs">ReactJS</li>
+          <li class="list" id="redux">Redux</li>
+          <li class="list" id="mui">Material-UI</li>
+        </ul>
+      </div>
+
+      <!--Second Div for order list-->
+      <div id="avengers" class="list-division">
+        <!--ol == order list-->
+        <!--used when we need listing with serial numbers-->
+        <h3>My favorite Avengers</h3>
+        <ol class="orderlist" id="avengers-ol">
+          <li class="avenger" id="thor">Thor: <span>God of Thunder</span></li>
+          <li class="avenger" id="hulk">
+            Hulk: <span>Gamma radioactive</span>
+          </li>
+          <li class="avenger" id="ironman">
+            Iron-man: <span>Man of steel and Jarvis</span>
+          </li>
+          <li class="avenger" id="captian-america">
+            Captian America: <span>Undefeatble Soldier</span>
+          </li>
+          <li class="avenger" id="black">
+            Black widow: <span>Clever and brave</span>
+          </li>
+          <li class="avenger" id="hawk">
+            Hawk-eye: <span>Unbreakable Aim</span>
+          </li>
+        </ol>
+      </div>
+
+      <!--OL with start number-->
+      <div class="list-division" id="superheroes">
+        <h3 class="superheroes" id="superheroes">My favorite superheroes</h3>
+        <ol start="7" class="orderlist" id="superheroes-ol">
+          <li class="superhero" id="spdereman">Spider-man</li>
+          <li class="superhero" id="batman">Bat-Man</li>
+          <li class="superhero" id="superman">Super-Man</li>
+          <li class="superhero" id="shaktiman">Shaktiman</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
