@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <style></style>
+  <body>
+    <div class="main-div">
+      <h1>Types of Input boxes in html</h1>
+      <div class="signup-form">
+        <!--Label used to provide what kind of input box is-->
+        <!--for is used to indicate for which label is going to be used like -> html, css, javascript-->
+        <label id="first-name" for="html">First Name:</label>
+
+        <!--input box is used to get some value from user through input box -->
+        <!-- 1. Input -> Text type-->
+        <!--placeholder -> provide light text inside the input box to guide user-->
+        <!--value -> to provide any default value inside the input box-->
+        <!--minLength -> User has some limitation to enter minimum words-->
+        <!--maxLength -> User has some limitation to enter maximum words-->
+
+        <input
+          type="text"
+          id="first-name"
+          placeholder="Enter your First Name"
+          minlength="6"
+          maxlength="20"
+        />
+        <!--Br used to enter in 2nd line-->
+        <br /><br />
+        <label id="last-name" for="html">Last Name:</label>
+        <input
+          type="text"
+          placeholder="Enter your last name"
+          id="last-name"
+          minlength="6"
+          maxlength="20"
+        />
+
+        <br />
+        <br />
+        <!--Email-->
+        <!--tye -> email -> to provide only a vali email-->
+        <label id="email" for="html">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your eEmail here"
+          minlength="6"
+          maxlength="50"
+        />
+        <br />
+        <br />
+
+        <!--Password-->
+        <!--Type -> password -> to show entered password in hidden form-->
+        <label id="password" for="html">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Your Password"
+          minlength="6"
+        />
+
+        <br />
+        <br />
+
+        <!--disabled input-->
+        <!--Disabled ->  to disable input box, to prevent user to enter anything in form-->
+        <label id="disab    led" for="html">Disable Password</label>
+        <input id="disable" placeholder="This is disabled box" disabled />
+        <br />
+        <br />
+
+        <!--Phone Number-->
+        <!--Type -> number -> to enter only Number in form-->
+        <label id="phone-number" for="html">Phone-Number</label>
+        <input
+          type="number"
+          id="phone-number"
+          minlength="10"
+          maxlength="10"
+          placeholder="Enter Your Phone Number"
+        />
+        <br />
+        <br />
+
+        <!--Tel Number-->
+        <!--Type -> tel -> to enter only telephone in form-->
+        <label id="tel" for="html">Telephone</label>
+        <input
+          type="tel"
+          id="tel"
+          minlength="4"
+          maxlength="10"
+          placeholder="Enter Your Telephone Number"
+        />
+        <br />
+        <br />
+
+        <!--Check-Box-->
+        <!--Type -> checkbox -> to select multiple options in form-->
+        <label id="languages" for="html">Languages</label><br />
+
+        <!--type -> value -> to provide some value while submitting the form -->
+        <input type="checkbox" id="languages" value="html" />
+        <label id="html" for="html">HTML</label><br />
+
+        <input type="checkbox" id="languages" value="CSS" />
+        <label id="css" for="html">CSS</label><br />
+
+        <input type="checkbox" id="languages" value="javascript" checked />
+        <label id="javascript" for="html">Javascript</label>
+        <br />
+        <br />
+
+        <!--Radio button - for Gender-->
+        <!--Type -> radio -> to enter only one option in form-->
+        <label id="gender" for="html">Gender</label>
+        <input type="radio" id="radio" value="male" />
+        <label id="male" for="male">Male</label>
+
+        <input type="radio" id="radio" value="female" />
+        <label id="female" for="female">Female</label>
+
+        <input type="radio" id="radio" value="other" />
+        <label id="Other" for="other">Other</label>
+        <br />
+        <br />
+
+        <!--Date -> Date of Birth-->
+        <!--Type -> date -> to enter dates in form-->
+        <label id="dob" for="html">Date of Birth</label>
+        <input type="date" id="dob" />
+        <br />
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
