@@ -1,0 +1,63 @@
+----How to deal with git---
+
+Github -> website 
+git   -> on your system
+
+--------------------------
+version manager
+-------------------------
+use to store, push code online,
+------------------------
+to work with team
+------------------------
+branch -> master ->  
+    	Branch	-> Homepage -> sunil -> work on homepage
+	Branch	-> About -> Ravi-> work on About
+	Branch	-> Contact Us -> Karan -> work on Contact-us	
+	
+
+-------------------------------
+Create Repository
+1. Create (on left side bar -> when new Account)
+2. + icon on top right -> create new repository
+3. Profile icon -> repository -> New (Button)
+
+--------------------------------------------
+Provide  name of repository like (io-aspiration)
+Description (optional)
+Type-> 	Public
+	Private
+Done-
+
+---------------
+link will be generated like (https://github.com/io2-inderpal/io-aspiration.git)
+-------------------------------------------------------------------------------
+Come to folder where ypu want to clone that repository
+------------------------------------------------------------
+1st method->right click -> git bash here
+2nd method -> top address click -> cmd
+terminal will be open
+------------------------------------------------------------
+enter the command ->   to check git version -> git --version
+enter the command to clone -> git clone "https://github.com/io2-inderpal/io-aspiration.git"
+--message to clone empty repository-- OK
+Repository folder will be shown in the folder.
+--------------------------------------------------------
+1st method -go inside the folder by click on folder 
+2nd method - command cd foldername  like ( cd io-aspiration)
+ will be entered inside the folder and will show .git hidden folder
+---------------------------
+do whatever
+file create or folder create 
+----------------------------------
+ 1. git status
+it will show a file/folder in red color --> that's mean you have worked on it and it need to be pushed
+2. git add .  --> to add all the file 
+3. git status --> it will show files/folders in green color/ if green the folders/files have been added
+4. git commit -m "this is my first commit"  -->  to commit code
+5. git push origin master/main
+    It will push your code to github
+    Goto github and refresh to check your changes. 
+
+
+----------------------
