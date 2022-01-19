@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--to add external syling we have to use <link> -->
+    <!-- inside link tag -> use rel == relation, rel='stylesheet' href='style.css' -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Form with styling</title>
+  </head>
+
+  <body>
+    <div class="main-div">
+      <h1 class="title">Types of Input boxes in html</h1>
+      <h3>It's free and only takes a minute</h3>
+      <hr class="horizontal-row" />
+      <div class="signup-form">
+        <!--Label used to provide what kind of input box is-->
+        <!--for is used to indicate for which label is going to be used like -> html, css, javascript-->
+        <label class="label-class" id="first-name" for="html"
+          >First Name:</label
+        >
+
+        <!--input box is used to get some value from user through input box -->
+        <!-- 1. Input -> Text type-->
+        <!--placeholder -> provide light text inside the input box to guide user-->
+        <!--value -> to provide any default value inside the input box-->
+        <!--minLength -> User has some limitation to enter minimum words-->
+        <!--maxLength -> User has some limitation to enter maximum words-->
+
+        <input
+          class="input-box"
+          type="text"
+          id="first-name"
+          placeholder="Enter your First Name"
+          minlength="6"
+          maxlength="20"
+        />
+        <!--Br used to enter in 2nd line-->
+        <br /><br />
+        <label class="label-class" id="last-name" for="html">Last Name:</label>
+        <input
+          class="input-box"
+          type="text"
+          placeholder="Enter your last name"
+          id="last-name"
+          minlength="6"
+          maxlength="20"
+        />
+
+        <br />
+        <br />
+        <!--Email-->
+        <!--tye -> email -> to provide only a vali email-->
+        <label class="label-class" id="email" for="html">Email:</label>
+        <input
+          class="input-box"
+          type="email"
+          id="email"
+          placeholder="Enter your eEmail here"
+          minlength="6"
+          maxlength="50"
+        />
+        <br />
+        <br />
+
+        <!--Password-->
+        <!--Type -> password -> to show entered password in hidden form-->
+        <label class="label-class" id="password" for="html">Password</label>
+        <input
+          class="input-box"
+          type="password"
+          id="password"
+          placeholder="Enter Your Password"
+          minlength="6"
+        />
+
+        <br />
+        <br />
+
+        <!--disabled input-->
+        <!--Disabled ->  to disable input box, to prevent user to enter anything in form-->
+        <label class="label-class" id="disab    led" for="html"
+          >Disable Password</label
+        >
+        <input
+          class="input-box"
+          id="disable"
+          placeholder="This is disabled box"
+          disabled
+        />
+        <br />
+        <br />
+
+        <!--Phone Number-->
+        <!--Type -> number -> to enter only Number in form-->
+        <label class="label-class" id="phone-number" for="html"
+          >Phone-Number</label
+        >
+        <input
+          class="input-box"
+          type="number"
+          id="phone-number"
+          minlength="10"
+          maxlength="10"
+          placeholder="Enter Your Phone Number"
+        />
+        <br />
+        <br />
+
+        <!--Tel Number-->
+        <!--Type -> tel -> to enter only telephone in form-->
+        <label class="label-class" id="tel" for="html">Telephone</label>
+        <input
+          class="input-box"
+          type="tel"
+          id="tel"
+          minlength="4"
+          maxlength="10"
+          placeholder="Enter Your Telephone Number"
+        />
+        <br />
+        <br />
+
+        <!--Date -> Date of Birth-->
+        <!--Type -> date -> to enter dates in form-->
+        <label class="label-class" id="dob-label" for="html"
+          >Date of Birth</label
+        >
+        <input class="input-box" type="date" id="dob" />
+        <br />
+        <br />
+
+        <!--Check-Box-->
+        <!--Type -> checkbox -> to select multiple options in form-->
+        <label class="label-class" id="languages" for="html">Languages</label
+        ><br />
+
+        <!--type -> value -> to provide some value while submitting the form -->
+        <div class="input-div">
+          <input
+            class="input-box input-checkbox"
+            type="checkbox"
+            id="languages"
+            value="html"
+            checked
+          />
+          <label class="label-class label-check" id="html" for="html"
+            >HTML</label
+          ><br />
+
+          <input
+            class="input-box input-checkbox"
+            type="checkbox"
+            id="languages"
+            value="CSS"
+            checked
+          />
+          <label class="label-class label-check" id="css" for="html">CSS</label
+          ><br />
+
+          <input
+            class="input-box input-checkbox"
+            type="checkbox"
+            id="languages"
+            value="javascript"
+          />
+          <label class="label-class label-check" id="javascript" for="html"
+            >Javascript</label
+          >
+          <br />
+          <br />
+        </div>
+
+        <!--Radio button - for Gender-->
+        <!--Type -> radio -> to enter only one option in form-->
+        <label class="label-class" id="gender" for="html">Gender</label>
+        <div class="radio-group">
+          <input
+            class="radio-button-group"
+            type="radio"
+            id="radio"
+            value="male"
+          />
+          <label class="label-class gender-label" id="male" for="male"
+            >Male</label
+          >
+        </div>
+
+        <div class="radio-group">
+          <input
+            class="radio-button-group"
+            type="radio"
+            id="radio"
+            value="female"
+          />
+          <label class="label-class gender-label" id="female" for="female"
+            >Female</label
+          >
+        </div>
+        <div class="radio-group">
+          <input
+            class="radio-button-group"
+            type="radio"
+            id="radio"
+            value="other"
+          />
+          <label class="label-class gender-label" id="Other" for="other"
+            >Other</label
+          >
+        </div>
+        <br />
+        <br />
+
+        <!--Button-->
+        <!--type -> button, submit, reset-->
+        <!--Value -> Button name-->
+        <input class="input-box" id="done-button" type="button" value="Done" />
+      </div>
+    </div>
+  </body>
+</html>
