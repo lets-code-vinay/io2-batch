@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dropdowns</title>
+  </head>
+  <style>
+    .main-div {
+      width: 50%;
+      margin: auto;
+      border: 2px dotted yellowgreen;
+      border-radius: 15px;
+      padding: 10px;
+      background-color: rebeccapurple;
+      color: aliceblue;
+      height: 400px;
+    }
+
+    h2 {
+      width: 33%;
+      margin-left: 33%;
+      text-align: center;
+      font-family: "Circular-Loom";
+      text-shadow: 3px 4px 10px white;
+    }
+    .selection {
+      margin-left: 25%;
+      text-align: right;
+      width: fit-content;
+      font-size: x-large;
+      font-weight: 600;
+      color: beige;
+    }
+    select {
+      background-color: cornsilk;
+      margin-left: 0%;
+      width: 200px;
+      height: 25px;
+      border: 2px solid black;
+      border-radius: 10px;
+      color: dimgrey;
+    }
+    option {
+      border: 2px solid red;
+      border-radius: 2px;
+    }
+
+    table,
+    tr,
+    td,
+    th {
+      border: 2px solid yellow;
+      border-collapse: collapse;
+    }
+
+    #table-col-2 {
+      width: 200px;
+      padding-left: 10px;
+    }
+    #table-col-1 {
+      text-align: center;
+      width: 80px;
+    }
+    #table-col-3 {
+      width: 50%;
+      padding: 5px;
+    }
+    .input-box {
+      background-color: cornsilk;
+      width: 195px;
+      height: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      color: dimgrey;
+      margin-left: 25%;
+      padding: 0;
+      padding-left: 5px;
+    }
+
+    .table-div {
+      margin-left: 20%;
+    }
+  </style>
+  <body>
+    <div class="main-div">
+      <h2>I'm learning Dropdown</h2>
+      <hr />
+
+      <div class="table-div">
+        <h3>Table for selection</h3>
+        <table>
+          <tr>
+            <th id="table-col-1">Sr no.</th>
+            <th>Type</th>
+            <th>Data</th>
+          </tr>
+
+          <!--Data to fill-->
+          <tr>
+            <td id="table-col-1">1.</td>
+            <td id="table-col-2">Name</td>
+            <td id="table-col-3">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                class="input-box"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td id="table-col-1">2.</td>
+            <td id="table-col-2"><label>Select your favorite cars</label></td>
+            <td id="table-col-3">
+              <!--To use dropdowns-->
+              <div class="car-main-div selection">
+                <select id="car-brand" class="cars">
+                  <!--options to show in your dropdown-->
+                  <option value="ford">Ford</option>
+                  <option value="suzuki">Suzuki</option>
+                  <option value="acura">Acura</option>
+                  <option value="inifinity">Infinity</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td id="table-col-1">3.</td>
+            <td id="table-col-2"><label>Select your Gender</label></td>
+            <td id="table-col-3">
+              <div class="gender selection">
+                <select>
+                  <option value="male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td id="table-col-1">3.</td>
+            <td id="table-col-2"><label>Address</label></td>
+            <td id="table-col-3">
+              <div class="address">
+                <textarea
+                  placeholder="Enter your address"
+                  rows="5"
+                  cols="10"
+                  value="10"
+                >
+                </textarea>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
