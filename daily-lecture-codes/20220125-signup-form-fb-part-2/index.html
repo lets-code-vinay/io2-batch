@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Facebook</title>
+  </head>
+  <body>
+    <div class="fb-signup-div">
+      <div class="sign-up-title">
+        <h2 id="title">Sign Up</h2>
+        <div class="cross-icon">
+          <img src="cross.png" height="24px" width="24px" />
+        </div>
+      </div>
+      <span class="tag">It's quick and easy.</span>
+      <hr />
+      <div class="form">
+        <div class="names">
+          <input
+            type="text"
+            placeholder="First Name"
+            id="first-name"
+            class="name-input"
+          />
+          <input
+            type="text"
+            placeholder="Surname Name"
+            id="surname-name"
+            class="name-input"
+          />
+        </div>
+        <input
+          type="text"
+          placeholder="Mobile number or Email Address"
+          class="email-mobile"
+        />
+
+        <input type="password" placeholder="New Password" class="password" />
+        <div class="date-of-birth">
+          <label>Date of Birth</label><br />
+          <div class="dob">
+            <select>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+            </select>
+
+            <select>
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+              <option>Apr</option>
+              <option>May</option>
+              <option>Jun</option>
+            </select>
+
+            <select>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+              <option>2003</option>
+              <option>2004</option>
+              <option>2005</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- RAdio buttons for gender-->
+        <div class="gender-division">
+          <label>Gender</label><br />
+          <div class="gender-div">
+            <div class="gender" id="gender-radio">
+              <span id="gender-male-label">Male</span>
+              <input type="radio" id="gender-male" />
+            </div>
+            <div class="gender" id="gender-female">
+              <span id="gender-female-label">Female</span>
+              <input type="radio" id="gender-radio" />
+            </div>
+            <div class="gender" id="gender-other">
+              <span id="gender-other-label">Other</span>
+              <input type="radio" id="gender-radio" />
+            </div>
+          </div>
+        </div>
+
+        <!--Terms & conditions-->
+        <div>
+          <p id="terms-condi">
+            By clicking Sign Up, you agree to our
+            <a href="https://youtube.com" target="blank">Terms</a>,<a
+              href="https://github.com/"
+              target="blank"
+            >
+              Data Policy</a
+            >
+            and <a href="https://google.co.in" target="blank">Cookie Policy</a>.
+            You may receive SMS notifications from us and can opt out at any
+            time.
+          </p>
+        </div>
+
+        <!--Sign up button-->
+        <div class="sign-up-button">
+          <input type="submit" value="Sign Up" id="signup" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
