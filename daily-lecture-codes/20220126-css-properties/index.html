@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS -Properties</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .main-div {
+      margin: auto;
+      margin-top: 5%;
+      width: 70%;
+      height: 100vh;
+      background-color: rgb(201, 153, 153);
+      background-image: url(rose.jpeg);
+
+      padding: 1%;
+      border-right: 2px solid black;
+      border-left: 2px dotted blue;
+    }
+    .second-div {
+      width: 50%;
+      height: 50%;
+      margin: auto;
+      /* how to use background images */
+      /* background-color: #ff892c; */
+      /* background-image: linear-gradient(
+        60deg,
+        red 10%,
+        white 20%,
+        yellow 20%,
+        blue 50%
+      ); */
+      /* background-image: radial-gradient(
+        red 20%,
+        white 20%,
+        yellow 40%,
+        blue 30%
+      ); */
+      background-color: rgb(100, 205, 101, 0.5);
+
+      /* background-image: url(rose.jpeg); */
+      /* background-image: url(https://d3cif2hu95s88v.cloudfront.net/live-site-2016/image/cache/Banners/event-banners/2018/jan/jan-flowers-1.jpg); */
+
+      border-bottom-left-radius: 100px;
+      border-top-right-radius: 100px;
+      box-shadow: 10px 10px 20px 3px black;
+      /*position*/
+      /* position: fixed; */
+
+      position: absolute;
+    }
+    .third-div {
+      width: 200px;
+      height: 200px;
+      background-color: bisque;
+      border-radius: 50%;
+      border: 2px solid black;
+      position: sticky;
+      position: relative;
+    }
+    .fourth-div {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(152, 225, 228);
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      z-index: 99;
+    }
+
+    .link {
+      margin: auto;
+      font-size: larger;
+    }
+
+    /* PSEUDO SELECTOR*/
+    #link1:hover {
+      color: black;
+      background-color: cornsilk;
+      border: 1px solid black;
+      border-radius: 2px;
+      width: 50px;
+      text-align: center;
+    }
+    #link2:active {
+      color: black;
+      background-color: cornsilk;
+      border: 1px solid black;
+      border-radius: 2px;
+      width: 50px;
+      text-align: center;
+    }
+    #link3:visited {
+      color: yellow;
+      background-color: cornsilk;
+      border: 1px solid black;
+      border-radius: 2px;
+      width: 50px;
+      text-align: center;
+    }
+    #link4:hover {
+      color: black;
+      background-color: cornsilk;
+      border: 1px solid black;
+      border-radius: 2px;
+      width: 50px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="main-div">
+      <div class="third-div"></div>
+      <div class="second-div"></div>
+    </div>
+    <div class="fourth-div">
+      <a href="#" id="link1" class="link">link1</a>
+      <a href="#" class="link" id="link2">link2</a>
+      <a href="#" class="link" id="link3">link3</a>
+      <a href="#" class="link" id="link4">link4</a>
+    </div>
+  </body>
+</html>
