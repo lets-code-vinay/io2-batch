@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>list-styling</title>
+  </head>
+  <style>
+    .div-main {
+      position: relative;
+    }
+    .child-image {
+      background-image: url(hulk.jpg);
+      height: 800px;
+      width: 1800px;
+      position: absolute;
+      border: 3px solid yellow;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      /* z-index: 99; */
+    }
+
+    .ul {
+      border: 2px solid red;
+      position: relative;
+      color: yellow;
+      /* background-image: url(rose.jpeg); */
+      /* width: 2500px; */
+      /* height: 200px; */
+    }
+    .ul li {
+      /* list styling types*/
+
+      /* to Square*/
+      /* list-style-type: square;  */
+
+      /* to disable list dot or bullets*/
+      /* list-style-type: none; */
+
+      /* to circle*/
+      /* list-style-type: circle; */
+
+      /* to open sign*/
+      /* list-style-type: disclosure-open;  */
+
+      /* to close sign */
+      list-style-type: disclosure-closed;
+      list-style-position: outside;
+    }
+
+    /* adding image with proper size; */
+    /* .ul .ir {
+
+      list-style-image: url(emoji.jpg);
+    } */
+    .div2 {
+      width: 250px;
+      height: 150px;
+      background-image: url(rose.jpeg);
+      z-index: 99;
+      position: relative;
+      margin: auto;
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <div class="div-main">
+      <div class="child-image"></div>
+      <div class="div2"></div>
+      <div class="ul">
+        <ul>
+          <li>Hulk</li>
+          <li>Captain America</li>
+          <li class="ir">Iron Man</li>
+          <li>Hawkeye</li>
+          <li>Thor</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
