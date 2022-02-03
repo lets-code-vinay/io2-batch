@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transform</title>
+  </head>
+  <style>
+    /* Transform property to provide some extra effects like rotate, skew, translate,scale */
+    /*1. ROTATE: to rotate any element at particular angle we use her rotate(30deg), rotateX(30deg), rotateY(30deg)*/
+    /*2. SCALE: To increase or decrease the size of any element*/
+    /*3. TRANSLATE: To move any element from it's actual position*/
+    /*4. SKEW: To tilt any Element*/
+
+    .main {
+      background: rgb(206, 185, 185);
+      border: 2px solid green;
+      width: 100%;
+      height: 40vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .child {
+      width: 150px;
+      height: 150px;
+      border: 1px solid blue;
+      margin-top: 30px;
+      margin-left: 4%;
+      /*Transition to provide delay in seconds for animation*/
+      transition: 2s;
+    }
+    #child1 {
+      border: 1px solid blue;
+      background-color: yellow;
+    }
+    /*----Rotate */
+    #child1:hover {
+      /*----to Rotate any element at particular angle, we  have to provide angle in degree like rotate(30deg) */
+      /* transform: rotate(90deg);*/
+      /* transform: rotate(45deg);*/
+      /* transform: rotate(180deg);*/
+      transform: rotate(75deg);
+      /* transform: rotate(360deg);*/
+
+      background-color: red;
+      cursor: pointer;
+    }
+
+    #child2 {
+      border: 1px solid blue;
+      background-color: blanchedalmond;
+    }
+
+    #child2:hover {
+      /*To rotate any element as per axis of  Y*/
+      transform: rotateY(360deg);
+      /* transform: rotateY(180deg); */
+      /* transform: rotateY(45deg); */
+      /* transform: rotateY(90deg); */
+      background-color: bisque;
+      cursor: pointer;
+    }
+
+    #child3 {
+      border: 1px solid black;
+      background-color: grey;
+    }
+    #child3:hover {
+      /*To rotate any element as per axis of X*/
+      /* transform: rotateX(360deg); */
+      transform: rotateX(180deg);
+      /* transform: rotateX(45deg); */
+      /* transform: rotateX(90deg); */
+      background-color: aqua;
+      cursor: pointer;
+    }
+
+    #child4 {
+      border: 1px solid black;
+      background-color: yellow;
+    }
+    /*To increase the size of any element*/
+    #child4:hover {
+      transform: scale(1.2);
+      color: blue;
+      background: brown;
+      cursor: pointer;
+      border-radius: 10%;
+    }
+
+    #child5 {
+      border: 1px solid black;
+      background-color: salmon;
+    }
+    /*To decrease the size of any element*/
+    #child5:hover {
+      transform: scale(0.8);
+      color: rgb(117, 117, 221);
+      background: rgb(161, 11, 11);
+      cursor: pointer;
+      border-radius: 10%;
+    }
+
+    #child6 {
+      border: 1px solid black;
+      background-color: honeydew;
+    }
+    /*To move up/down- right/left from actual position*/
+    #child6:hover {
+      /* transform: translate(20px, 0px); */
+      /* transform: translate(0px, 20px); */
+      /* transform: translate(0px, -20px); */
+      transform: translate(-20px, 0px);
+      background: burlywood;
+      border-radius: 10%;
+      cursor: pointer;
+    }
+
+    #child7 {
+      border: 1px solid black;
+      background-color: firebrick;
+    }
+    /*To move from actual position*/
+    #child7:hover {
+      transform: translate(20px, 20px);
+      /* transform: translate(-20px, 20px); */
+      /* transform: translate(20px, -20px); */
+      /* transform: translate(-20px, -20px); */
+
+      background: cadetblue;
+      border-radius: 10%;
+      cursor: pointer;
+    }
+
+    /*To tilt any Element*/
+    #child8 {
+      border: 1px solid black;
+      background-color: aliceblue;
+    }
+    #child8:hover {
+      /* transform: skewY(10deg); */
+      /* transform: skewX(10deg); */
+      transform: skew(-20deg, 20deg);
+
+      background: tan;
+      border-radius: 10%;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="child" id="child1">child1</div>
+      <div class="child" id="child2">child2</div>
+      <div class="child" id="child3">child3</div>
+      <div class="child" id="child4">child4</div>
+      <div class="child" id="child5">child5</div>
+      <div class="child" id="child6">child6</div>
+      <div class="child" id="child7">child7</div>
+      <div class="child" id="child8">child8</div>
+    </div>
+  </body>
+</html>
