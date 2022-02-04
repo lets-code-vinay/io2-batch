@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sticky-Fixed</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .mainDiv {
+        width: 100%;
+        height: 300vh;
+        border: 2px solid green;
+        background: rgb(186, 150, 223);
+        display: flex;
+        flex-direction: column;
+      }
+      .secondDiv {
+        width: 50%;
+        height: 50%;
+        border: 2px solid rgb(147, 218, 147);
+        background: rgb(132, 75, 189);
+        position: relative;
+      }
+      .thirdDiv {
+        width: 80%;
+        height: 80%;
+        border: 2px solid green;
+        background: rgb(7, 145, 199);
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        display: flex;
+      }
+      .fourthDiv {
+        width: 40%;
+        height: 40%;
+        border: 2px solid rgb(110, 173, 224);
+        background: rgb(0, 19, 7);
+        position: absolute;
+        left: 10px;
+
+        top: 10px;
+        z-index: 20;
+        color: white;
+      }
+      .fifthDiv {
+        width: 40%;
+        height: 40%;
+        border: 2px solid rgb(66, 219, 66);
+        background: rgb(212, 109, 77);
+        z-index: 10;
+      }
+      .stickyDiv {
+        margin: auto;
+        width: 60%;
+      }
+
+      .pTag {
+        width: 50%;
+        /* margin: auto; */
+        border: 2px solid red;
+      }
+
+      .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 10px;
+        bottom: 10px;
+        margin-top: 20%;
+        background-color: bisque;
+      }
+
+      .sticky2 {
+        position: sticky;
+        top: 10px;
+        z-index: 50;
+        background-color: bisque;
+      }
+      .pTag {
+        position: sticky;
+        top: 100px;
+        background-color: aqua;
+      }
+
+      .chatBox {
+        width: 150px;
+        height: 20px;
+        color: rgb(78, 12, 12);
+        background-color: blanchedalmond;
+        position: fixed;
+        padding-left: 10px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border: 2px solid green;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="stickyDiv">
+        <h1 class="sticky">I am Sticky Position</h1>
+        <p class="pTag">
+          An unincorporated area is a region that is not governed by a local
+          municipal corporation.[1] Similarly, an unincorporated community is a
+          settlement not governed by its own local municipal corporation, but
+          administered as part of larger administrative divisions, such as a
+          township, parish, borough, county, city, canton, state, province, or
+          country.[citation needed] Occasionally, municipalities dissolve or
+          disincorporate, which may happen if they become fiscally insolvent,
+          and services become the responsibility of a higher administration.
+          Widespread unincorporated communities and areas are a distinguishing
+          feature of the United States and Canada.[citation needed] Most other
+          countries of the world have either no unincorporated areas at all, or
+          these are very rare; typically remote, outlying, sparsely populated,
+          or uninhabited areas.
+        </p>
+        <p>
+          By country Argentina In Argentina, the provinces of Chubut, Córdoba,
+          Entre Ríos, Formosa, Neuquén, Río Negro, San Luis, Santa Cruz,
+          Santiago del Estero, Tierra del Fuego, and Tucumán have areas that are
+          outside any municipality or commune. Australia Unlike many other
+          countries, Australia has only one level of local government
+          immediately beneath state and territorial governments. A local
+          government area (LGA) often contains several towns and even entire
+          cities. Thus, aside from very sparsely populated areas and a few other
+          special cases, almost all of Australia is part of an LGA.
+          Unincorporated areas are often in remote locations, cover vast areas,
+          or have very small populations. Postal addresses in unincorporated
+          areas, as in other parts of Australia, normally use the suburb or
+          locality names gazetted by the relevant state or territorial
+          government. Thus, any ambiguity regarding addresses rarely exists in
+          unincorporated areas. Queensland, Tasmania, and Western Australia are
+          entirely partitioned into LGAs and have no unincorporated areas.
+          Australian Capital Territory The Australian Capital Territory (ACT)
+          has no municipalities. The territorial government is directly
+          responsible for matters normally carried out by a local government. In
+          some countries, this arrangement would be referred to as a unitary
+          authority, but the Australian Bureau of Statistics refers to the whole
+          of the ACT as an unincorporated area.[1] New South Wales The far west
+          and north of New South Wales constitutes the Unincorporated Far West
+          Region, which is sparsely populated and barely warrants an elected
+          council. A civil servant in the state capital manages such matters as
+          are necessary. The second unincorporated area of this state is Lord
+          Howe Island. Northern Territory In the Northern Territory, 1.45% of
+          the total area and 4.0% of the population are in unincorporated areas,
+          including the Unincorporated Top End Region (the largest), areas
+          covered by the Northern Territory Rates Act, Nhulunbuy, the community
+          of Alyangula on Groote Eylandt in the northern region, and Yulara in
+          the southern region.[2] South Australia In South Australia, 60% of the
+          area is unincorporated and communities located within can receive
+          municipal services provided by a state agency, the Outback Communities
+          Authority.[3] Victoria Victoria has 10 small unincorporated areas,
+          which are either small islands directly administered by the state or
+          ski resorts administered by state-appointed management boards.[2]
+          Canada See also: Unorganized area In Canada, depending on the
+          province, an unincorporated settlement is one that does not have a
+          municipal council that governs solely over the settlement. It is
+          usually, but not always, part of a larger municipal government. This
+          can range from being a small hamlet to being a large urbanized area
+          that is similar in size to a town or city. For example, were they
+          incorporated, the urban service areas of Fort McMurray in the Regional
+          Municipality of Wood Buffalo and Sherwood Park in Strathcona County
+          would be the fifth- and sixth-largest cities in Alberta. In British
+          Columbia, unincorporated settlements lie outside municipal boundaries
+          entirely, and are administered directly by regional/county-level
+          governments similar to the American system. Unincorporated settlements
+          with a population between 100 and 1,000 residents may have the status
+          of designated place in Canadian census data.[4] In some provinces,
+          large tracts of undeveloped wilderness or rural country are
+          unorganized areas that fall directly under the provincial
+          jurisdiction. Some unincorporated settlements in such unorganized
+          areas may have some types of municipal services provided to them by a
+          quasigovernmental agency such as a local services board in Ontario. In
+          New Brunswick, where a significant population lives in a local service
+          district, taxation and services may come directly from the province.
+          Czech Republic Sign prohibiting entry to the Military Area Boletice
+          The entire area of the Czech Republic is divided into municipalities
+          (obce, sg. obec), with the only exception being four military training
+          areas. These are parts of the regions and do not form self-governing
+          municipalities, but are rather governed by military offices (újezdní
+          úřad), which are subordinate to the Ministry of Defence. Military area
+          Region Civilian population (2021) Administrative centre (outside the
+          military areas) Area (km2; 2021) Libavá Olomouc 0 Město Libavá 327
+          Hradiště Karlovy Vary 0 Karlovy Vary 332 Boletice South Bohemian 0
+          Kájov 219 Březina South Moravian 0 Vyškov 158 Note: Brdy Military Area
+          was abandoned by the army in 2015 and converted into a Landscape park,
+          with its area being incorporated either into existing municipalities
+          or municipalities newly established from the existing settlements. The
+          other four military training areas were reduced in size in 2015 too.
+          The decisions on whether the settlements join existing municipalities
+          or form new ones are decided in plebiscites.[5] Denmark Ertholmene,
+          named so because they are small as a pea (Danish, ert, (modern) ært)
+          form the easternmost part of Denmark. This small archipelago lies 20
+          kilometers northeast of Bornholm. Population of less than 100.
+          Statistics Denmark groups them with Bornholm in Landsdel Bornholm.
+          Germany Since Germany has no administrative level comparable to the
+          townships of other countries, the vast majority of the country, close
+          to 99%, is organized in municipalities (German: Gemeinde, plural
+          Gemeinden), often consisting of multiple settlements that are not
+          considered to be unincorporated. Because these settlements lack a
+          council of their own, usually an Ortsvorsteher or Ortsvorsteherin
+          (village chairman / chairwoman) is appointed by the municipal council,
+          except in the very smallest villages. In 2000, the number of
+          unincorporated areas in Germany, called gemeindefreie Gebiete
+          (municipality-free areas) or singular gemeindefreies Gebiet, was 295
+          with a total area of 4,890.33 km2 and around 1.4% of its territory.
+          However, these are mostly unpopulated areas such as forests, lakes and
+          their surroundings, military training areas, and the like. As of 31
+          December 2007, Germany had 248 uninhabited unincorporated areas (of
+          which 214 are located in Bavaria), not belonging to any municipality,
+          consisting mostly of forested areas, lakes, and larger rivers. Also,
+          three inhabited unincorporated areas existed, all of which served as
+          military training areas: Osterheide and Lohheide in Lower Saxony, and
+          Gutsbezirk Münsingen in Baden-Württemberg. They had fewer than 2,000
+          inhabitants in total. After losing its inhabited parts to adjacent
+          municipalities on 1 January 2011, Gutsbezirk Münsingen is now
+          uninhabited.[6] Largest The following shows the largest unincorporated
+          areas in Germany (including all inhabited areas, but excluding lakes)
+          with an area of more than 50 km2: Regional number Unincorporated area
+          District State Area in km2 Population on 31 December 2010 031530000504
+          Harz (Landkreis Goslar) Goslar Lower Saxony 371.76 – 031560000501 Harz
+          (Landkreis Göttingen) Göttingen Lower Saxony 267.35 – 066330000200
+          Gutsbezirk Reinhardswald Kassel Hesse 182.58 – 033580000501 Osterheide
+          Heidekreis Lower Saxony 177.99 762 031550000501 Solling Northeim Lower
+          Saxony 177.49 – 033510000501 Lohheide Celle Lower Saxony 91.32 716
+          064350000200 Gutsbezirk Spessart Main-Kinzig-Kreis Hesse 89.30 –
+          091800000451 Ettaler Forst Garmisch-Partenkirchen Bavaria 83.46 –
+          084150000971 Gutsbezirk Münsingen Reutlingen Baden-Württemberg 64.68
+          160 010535303105 Sachsenwald Herzogtum Lauenburg Schleswig-Holstein
+          58.49 – 094720000468 Veldensteiner Forst Bayreuth Bavaria 55.60 –
+          033540000502 Göhrde Lüchow-Dannenberg Lower Saxony 51.81 –
+          033540000501 Gartow Lüchow-Dannenberg Lower Saxony 50.92 –
+          066360000200 Gutsbezirk Kaufunger Wald Werra-Meißner-Kreis Hesse 50.32
+          – † No inhabitants since 1 January 2011 as a result of reduction in
+          area. In Bavaria, there are other contiguous unincorporated areas
+          covering more than 50 km2; these are however composed of several
+          adjacent unincorporated areas combined, each of which is however under
+          50 km2 in area. Israel In Israel, almost all land is subdivided into
+          393 municipalities which are further classified, normally by
+          population, as city, local council, or regional council. All three
+          types of municipality provide services including zoning and planning.
+          However, a few unincorporated areas exist, whether because of
+          omissions and ambiguities left in official maps dating from the
+          British Mandate for Palestine, or due to deliberate policy of ensuring
+          facilities of national importance, such as Ben Gurion Airport, Mikveh
+          Israel boarding school, or the BAZAN Group oil refineries, would not
+          have their operation affected by local considerations. The largest
+          unincorporated area in Israel is the so-called "Reservation area", a
+          triangular region whose vertexes are Beersheba, Dimona and Arad, in
+          which all Negev Bedouins were concentrated in the 1950s. As no
+          municipal services are provided within unincorporated area, this
+          effectively makes all Bedouin settlements in the area unrecognized,
+          with the sole exception of those included within the Abu Basma
+          Regional Council. Netherlands The Netherlands has had regular periods
+          with unincorporated land when newly reclaimed land polders fall dry.
+          Unincorporated land is since medieval times administered by an
+          appointed officer with the name Landdrost or Drossaart. Also, Elten
+          and Tudderen, both annexed from Germany after World War II, were
+          governed by a Landdrost until they were ceded to Germany in 1963. The
+          most recent period with unincorporated land started in 1967, when the
+          dyke around Southern Flevoland was closed, but several years are
+          required before the polder is genuinely accessible for cultivation,
+          and construction of roads and homes can start, as in the first years,
+          the soil is equivalent to quicksand. During the initial period of
+          inhabitation, a special, government-appointed officer was installed,
+          the Landdrost. During the administrative office of a Landdrost, no
+          municipal council forms. In 1975, the first homes in what is now the
+          city of Almere were built, and from 1976 to 1984, the area was
+          governed by the Landdrost as the executive of the Openbaar Lichaam
+          Zuidelijke IJsselmeerpolders (Southern IJsselmeerpolders Public Body).
+          In 1984, the Landdrost became the first mayor of the new city Almere.
+          Since that date, the Netherlands does not have any unincorporated land
+          areas. The Openbaar Lichaam remained, however, only governing the
+          water body of the Markermeer. After the municipal division of the
+          Wadden Sea (1985), the territorial waters in the North Sea (1991) and
+          the IJsselmeer (1994), all water bodies are now also part of a
+          municipality[7] and no unincorporated areas exist in the Netherlands
+          anymore. The Openbaar Lichaam Zuidelijke IJsselmeerpolders was
+          dissolved in 1996. Norway
+        </p>
+      </div>
+
+      <div class="secondDiv">
+        <h2 class="sticky2">Hi. Im sticky 2</h2>
+        <div class="thirdDiv">
+          <div class="fourthDiv">4th Div</div>
+          <div class="fifthDiv">5th Div</div>
+        </div>
+      </div>
+    </div>
+    <div class="chatBox">Let's Chat here</div>
+  </body>
+</html>
