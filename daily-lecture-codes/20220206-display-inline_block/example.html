@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .main-div {
+      background: rgb(201, 188, 214);
+      width: 100%;
+      height: 100vh;
+    }
+    .nav-bar {
+      background-color: brown;
+      height: 60px;
+      color: #ffff;
+    }
+
+    .nav-items {
+      display: inline-block;
+      font-size: 30px;
+
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .nav-1 {
+      width: 50%;
+      display: inline-block;
+    }
+    .nav-2 {
+      width: 20%;
+      height: 100%;
+      display: inline-block;
+    }
+    .nav-3 {
+      width: 29.5%;
+      height: 100%;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .search {
+      top: -18px;
+      position: relative;
+    }
+
+    .searchInput {
+      width: 72%;
+      height: 38px;
+      border-radius: 21px;
+      padding: 10px;
+      padding-left: 25px;
+      font-size: 20px;
+      color: black;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .search-icon2 {
+      position: relative;
+      left: -35px;
+      top: 5px;
+    }
+  </style>
+  <body>
+    <div class="main-div">
+      <!-- -----Type 1----- -->
+      <div class="nav-bar">
+        <div class="nav-items home">
+          <a href="#" class="link"
+            ><img
+              src="home.png"
+              alt="Home-icon"
+              width="24px"
+              height="24px"
+            />Home</a
+          >
+        </div>
+        <div class="nav-items product">
+          <a href="#" class="link">
+            <img
+              src="product.png"
+              alt="Product-icon"
+              width="24px"
+              height="24px"
+            />Product</a
+          >
+        </div>
+        <div class="nav-items services">
+          <a href="#" class="link"
+            ><img
+              src="services.png"
+              alt="services-icon"
+              width="24px"
+              height="24px"
+            />Services</a
+          >
+        </div>
+        <div class="nav-items about">
+          <a href="#" class="link"
+            ><img
+              src="i.png"
+              alt="about-icon"
+              width="24px"
+              height="24px"
+            />About</a
+          >
+        </div>
+        <div class="nav-items contact">
+          <a href="#" class="link"
+            ><img
+              src="contact.png"
+              alt="contact-icon"
+              width="24px"
+              height="24px"
+            />Contact</a
+          >
+        </div>
+      </div>
+
+      <!-- -----Type 2---- -->
+      <div class="nav-bar">
+        <div class="nav-1">
+          <div class="nav-items home">
+            <a href="#" class="link"
+              ><img
+                src="home.png"
+                alt="Home-icon"
+                width="24px"
+                height="24px"
+              />Home</a
+            >
+          </div>
+          <div class="nav-items product">
+            <a href="#" class="link">
+              <img
+                src="product.png"
+                alt="Product-icon"
+                width="24px"
+                height="24px"
+              />Product</a
+            >
+          </div>
+          <div class="nav-items services">
+            <a href="#" class="link"
+              ><img
+                src="services.png"
+                alt="services-icon"
+                width="24px"
+                height="24px"
+              />Services</a
+            >
+          </div>
+          <div class="nav-items about">
+            <a href="#" class="link"
+              ><img
+                src="i.png"
+                alt="about-icon"
+                width="24px"
+                height="24px"
+              />About</a
+            >
+          </div>
+          <div class="nav-items contact">
+            <a href="#" class="link"
+              ><img
+                src="contact.png"
+                alt="contact-icon"
+                width="24px"
+                height="24px"
+              />Contact</a
+            >
+          </div>
+        </div>
+        <div class="nav-2"></div>
+        <div class="nav-3">
+          <div class="search">
+            <input type="text" class="searchInput" placeholder="Search.." />
+            <img
+              src="search.png"
+              alt="search-icon"
+              width="24px"
+              height="24px"
+              class="search-icon2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
