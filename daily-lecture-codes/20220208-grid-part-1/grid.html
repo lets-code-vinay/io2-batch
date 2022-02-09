@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Grid</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .grid-div{
+      border: 2px solid red;
+      width: 100%;
+      /* height: auto; */
+      display: grid;
+      grid-template-columns:150px 150px 150px 150px 150px;
+      grid-template-rows: 150px 150px 150px 150px 150px 150px 150px;
+      grid-gap: 10px; ;
+
+      /*align-items -->  To position elements according to vertical position; 
+      align-items: start/flex-start;
+      align-items: center; 
+      align-items: end/ flex-end;
+       */
+      /* align-items: center; */
+
+            /*justify-content -->  To position elements according to vertical position; 
+      justify-content: start/flex-start, left;
+      justify-content: center; 
+      justify-content: end/ flex-end/right;
+      justify-content: space-around;
+      justify-content: space-evenly;
+      justify-content: space-between;
+       */
+      /* justify-content: space-evenly ; */
+
+    }
+    .grid-child{
+      width: 150px;
+      height: 150px;
+      border: 1px solid green;
+
+
+    }
+
+    .grid-child{
+      border-top: 2px solid black;
+    }
+  </style>
+  <body>
+    <!-- Short-cut
+        to create any class with element -> .classname and enter -> <div class="classname">
+        to create any tag  with class -> h1.classname and enter -> <h1 class="classname"> 
+          to create any tag  with class -> p.classname and enter -> <p class="classname"> 
+          to create any tag  with id -> p#classname and enter -> <p id="classname"> 
+            to create any tag  with class and id-> p.classname#idname and enter -> <p class="classname" id="idname">
+            to create any tag  with class and id multiple times-> p.classname#idname*2 and enter ->   <p class="classname" id="idname">
+                                                                                                      <p class="classname" id="idname">  
+                                                                                                        
+        Keyboard shortcut-> Select multiple same items select single item -> ctrl+D
+                            To move row up and down -> alt+ arrow up/down key      
+                            Select multiple lines (not in sequence) -> alt+mouse click on line                                                                                                
+                                                                                                      -->
+
+
+
+    
+      <div class="grid-div">
+        <div class="grid-child" id="grid-id1"></div>
+        <div class="grid-child" id="grid-id2"></div>
+        <div class="grid-child" id="grid-id3"></div>
+        <div class="grid-child" id="grid-id4"></div>
+        <div class="grid-child" id="grid-id5"></div>
+        <div class="grid-child" id="grid-id6"></div>
+        <div class="grid-child" id="grid-id7"></div>
+        <div class="grid-child" id="grid-id8"></div>
+        <div class="grid-child" id="grid-id9"></div>
+        <div class="grid-child" id="grid-id10"></div>
+        <div class="grid-child" id="grid-id1"></div>
+        <div class="grid-child" id="grid-id2"></div>
+        <div class="grid-child" id="grid-id3"></div>
+        <div class="grid-child" id="grid-id4"></div>
+        <div class="grid-child" id="grid-id5"></div>
+        <div class="grid-child" id="grid-id6"></div>
+        <div class="grid-child" id="grid-id7"></div>
+        <div class="grid-child" id="grid-id8"></div>
+        <div class="grid-child" id="grid-id9"></div>
+        <div class="grid-child" id="grid-id10"></div>
+
+
+      </div>
+    </div>
+  </body>
+</html>
