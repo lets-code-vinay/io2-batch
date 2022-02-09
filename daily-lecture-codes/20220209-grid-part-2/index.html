@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Grid</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .grid-div{
+      border: 2px solid red;
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns:auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto ;
+
+      /* To provide gap in between grid we use GRID-GAP */
+
+      /* grid-gap: 10px; ; */
+      /* To provide gap in between two rows */
+      /* grid-row-gap: 15px; */
+      /* To provide gap in between two columns */
+      /* grid-column-gap: 10px; */
+
+      /* shorthand for gap */
+      /* grid-gap: 5px 15px; */
+
+      /*align-items -->  To position elements according to vertical position; 
+      align-items: start/flex-start;
+      align-items: center; 
+      align-items: end/ flex-end;
+       */
+      /* align-items: center; */
+
+            /*justify-content -->  To position elements according to vertical position; 
+      justify-content: start/flex-start, left;
+      justify-content: center; 
+      justify-content: end/ flex-end/right;
+      justify-content: space-around;
+      justify-content: space-evenly;
+      justify-content: space-between;
+       */
+      /* justify-content: space-evenly ; */
+
+    }
+    .grid-child{
+      width: 100%;
+      height: 100px;
+      border: 1px solid green;
+      text-align: center;
+    }
+
+ 
+
+    /* #grid-id7{
+      grid-column: 1/-1;
+    grid-row: 2;
+    border: none;
+    } */
+
+
+    #grid-id1{
+      grid-column: 1/-1;
+      grid-row: 1;
+    }
+
+    #grid-id2{
+      grid-column: 1;
+      grid-row: 2/-1;
+      border: 1px solid red;
+      height: 500px;
+
+    }
+
+    #grid-id3{
+      border: 1px solid red;
+
+      grid-column: 2/5;
+      grid-row: 2/5;
+      border: none;
+      height: 500px;
+    }
+
+    #grid-id4{
+      border: 1px solid red;
+
+      grid-column: 5/5;
+      grid-row: 2/5;
+      height: 500px;
+
+      /* border: none; */
+    }
+    #grid-id5{
+      border: 1px solid red;
+
+       grid-column: 1/-1;
+      grid-row: 5; 
+      width: 100%;
+
+      /* border: none; */
+    }
+  </style>
+  <body>
+    <!-- Short-cut
+        to create any class with element -> .classname and enter -> <div class="classname">
+        to create any tag  with class -> h1.classname and enter -> <h1 class="classname"> 
+          to create any tag  with class -> p.classname and enter -> <p class="classname"> 
+          to create any tag  with id -> p#classname and enter -> <p id="classname"> 
+            to create any tag  with class and id-> p.classname#idname and enter -> <p class="classname" id="idname">
+            to create any tag  with class and id multiple times-> p.classname#idname*2 and enter ->   <p class="classname" id="idname">
+                                                                                                      <p class="classname" id="idname">  
+                                                                                                        
+        Keyboard shortcut-> Select multiple same items select single item -> ctrl+D
+                            To move row up and down -> alt+ arrow up/down key      
+                            Select multiple lines (not in sequence) -> alt+mouse click on line                                                                                                
+                                                                                                      -->
+
+
+
+    
+      <div class="grid-div">
+        <div class="grid-child" id="grid-id1">grid-id1</div>
+        <div class="grid-child" id="grid-id2">grid-id2</div>
+        <div class="grid-child" id="grid-id3">grid-id3</div>
+        <div class="grid-child" id="grid-id4">grid-id4</div>
+        <div class="grid-child" id="grid-id5">grid-id5</div>
+        <!-- <div class="grid-child" id="grid-id6">grid-id6</div>
+        <div class="grid-child" id="grid-id7">grid-id7</div>
+        <div class="grid-child" id="grid-id8">grid-id8</div>
+        <div class="grid-child" id="grid-id9">grid-id9</div> -->
+        <!-- <div class="grid-child" id="grid-id10">grid-id10</div>
+        <div class="grid-child" id="grid-id11">grid-id11</div>
+        <div class="grid-child" id="grid-id12">
+<h1 class="heading">Helooooooo</h1> -->
+          
+        </div>
+        <!-- <div class="grid-child" id="grid-id13">grid-id13</div>
+        <div class="grid-child" id="grid-id14">grid-id14</div>
+        <div class="grid-child" id="grid-id15">grid-id15</div>
+        <div class="grid-child" id="grid-id16">grid-id16</div>
+        <div class="grid-child" id="grid-id17">grid-id17</div>
+        <div class="grid-child" id="grid-id18">grid-id18</div>
+        <div class="grid-child" id="grid-id19">grid-id19</div>
+        <div class="grid-child" id="grid-id20">grid-id20</div> -->
+
+
+      </div>
+    </div>
+  </body>
+</html>
