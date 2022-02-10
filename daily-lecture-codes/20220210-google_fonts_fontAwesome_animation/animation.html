@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Animation-part-1</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: aqua;
+    }
+    .main {
+      width: 100%;
+      height: auto;
+    }
+    .ani-1 {
+      width: 500px;
+      height: 50px;
+      border: 2px solid red;
+      margin: 20px auto;
+    }
+    .ani-2 {
+      width: 10%;
+      height: 100%;
+      background-color: brown;
+      display: flex;
+      justify-content: end;
+
+      /* For animation provide a variable name to any element --> animation: loader */
+      animation: loader;
+      /* To provide duration in seconds, means how long your animation will execute -> use -> animation-duration: 10s;  */
+      animation-duration: 2s;
+
+      /* How much time you want to run your animation */
+      /* animation-iteration-count: 3 --> for 3 times */
+      /* animation-iteration-count:infinite; for infinity(endless) */
+
+      animation-iteration-count: infinite;
+
+      /* To provide direction of animation like-> normal, initial, alternate, alternate-reverse */
+      animation-direction: normal;
+
+      /* For motion type of your animation */
+      transition: ease-in-out;
+    }
+    /* 
+    keyframe is used to define or execute animation
+    for this you have to write @keyframe with animation name like @keyframe cat {} */
+    @keyframes loader {
+      /* from defines the initial point for animation */
+      from {
+        width: 10%;
+      }
+      /* to defines the end point for animation */
+
+      to {
+        width: 70%;
+      }
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="ani-1">
+        <div class="ani-2"></div>
+      </div>
+    </div>
+  </body>
+</html>

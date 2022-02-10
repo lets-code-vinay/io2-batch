@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Kavoon&family=Redressed&family=Rowdies:wght@400;700&family=Supermercado+One&family=Syne+Tactile&family=Wallpoet&family=WindSong:wght@400;500&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+}
+.text {
+  font-family: "Festive", cursive;
+  font-size: 50px;
+}
+
+.text1 {
+  font-family: "Redressed", cursive;
+  font-size: 50px;
+}
+.text22 {
+  font-family: "Wallpoet", cursive;
+  font-size: 50px;
+}
+.text33 {
+  font-family: "Syne Tactile", cursive;
+  font-size: 50px;
+}
+.text44 {
+  font-family: "Rowdies", cursive;
+  font-size: 50px;
+}
+.text11 {
+  font-family: "Supermercado One", cursive;
+  font-size: 50px;
+}
+
+span {
+  font-family: "WindSong", cursive;
+  font-size: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: blue;
+}
+
+.icon-style {
+  color: red;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+}
+.icon-style:hover {
+  transform: rotate(45deg) scale(1.2) translateY(5px);
+  cursor: pointer;
+  color: rgb(206, 76, 25);
+}
+
+/* 
+font-family: 'Kavoon', cursive;
+font-family: 'Redressed', cursive;
+font-family: 'Wallpoet', cursive; */
