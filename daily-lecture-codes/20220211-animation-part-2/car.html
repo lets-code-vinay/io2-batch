@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Car-Animation-</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+    .main {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .car1 {
+      width: 200px;
+      height: 100px;
+      animation: car;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+
+    .car-img {
+      width: 200px;
+      height: 80px;
+    }
+    @keyframes car {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      10% {
+        transform: translate(100px, 0) rotate(90deg);
+      }
+      20% {
+        transform: translate(100px, 200px) rotate(135deg);
+      }
+
+      30% {
+        transform: translate(200px, 100px) rotate(160deg);
+      }
+      40% {
+        transform: translate(200px, 500px) rotate(0deg);
+      }
+      60% {
+        transform: translate(400px, 800px) rotate(45deg);
+      }
+      80% {
+        transform: translate(800px, 600px) rotate(90deg);
+      }
+      90% {
+        transform: translate(800px, 200px) rotate(90deg);
+      }
+      100% {
+        transform: translate(1200px, 200px) rotate(180deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="car">
+        <div class="car1">
+          <img src="car.png" class="car-img" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

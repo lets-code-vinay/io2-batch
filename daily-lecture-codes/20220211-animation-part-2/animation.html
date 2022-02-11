@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Animation-part-2</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: aqua;
+    }
+    .main {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .ani-1 {
+      width: 500px;
+      height: 50px;
+      border: 2px solid red;
+      margin: 20px auto;
+      border-radius: 25px;
+    }
+    .ani-2 {
+      width: 10%;
+      height: 100%;
+      background-color: brown;
+      border: 2px solid red;
+
+      display: flex;
+      justify-content: end;
+
+      border-radius: 25px;
+
+      /* For animation provide a variable name to any element --> animation: loader */
+      animation: loader;
+      /* To provide duration in seconds, means how long your animation will execute -> use -> animation-duration: 10s;  */
+      animation-duration: 2s;
+
+      /* How much time you want to run your animation */
+      /* animation-iteration-count: 3 --> for 3 times */
+      /* animation-iteration-count:infinite; for infinity(endless) */
+
+      animation-iteration-count: infinite;
+
+      /* To provide direction of animation like-> normal, initial, alternate, alternate-reverse */
+      animation-direction: normal;
+
+      /* For motion type of your animation */
+      transition: ease-in-out;
+    }
+    /* 
+    keyframe is used to define or execute animation
+    for this you have to write @keyframe with animation name like @keyframe cat {} */
+    @keyframes loader {
+      /* from defines the initial point for animation */
+      from {
+        width: 10%;
+      }
+      /* to defines the end point for animation */
+
+      to {
+        width: 100%;
+      }
+    }
+
+    .loading {
+      position: relative;
+      left: 45%;
+    }
+
+    /* Second animation------------------------ */
+    .second-ani {
+      width: 500px;
+      height: 500px;
+      border: 2px solid black;
+      margin-left: 20%;
+      border-radius: 55px;
+      margin-top: 5%;
+    }
+
+    .second {
+      width: 100px;
+      height: 100px;
+      border: 2px solid green;
+      border-radius: 50%;
+      background-color: beige;
+
+      animation: square-loader;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      transition: ease-in-out;
+      animation-direction: normal;
+    }
+
+    @keyframes square-loader {
+      0% {
+        transform: translate(0, 0);
+      }
+      20% {
+        transform: translate(0, 400px);
+      }
+
+      40% {
+        transform: translate(400px, 400px);
+      }
+      60% {
+        transform: translate(400px, 0);
+      }
+      80% {
+        transform: translate(0, 0);
+      }
+    }
+
+    /* Third Animation-------------------- */
+
+    .third-ani {
+      /* background-color: blanchedalmond; */
+      width: 200px;
+      height: 200px;
+      /* border: 2px solid blue; */
+      margin-left: 60%;
+      border-radius: 50%;
+    }
+    .third {
+      width: 25%;
+      height: 25%;
+      margin: 8px auto;
+
+      animation: circle-loader;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+
+      animation-direction: reverse;
+    }
+
+    .third-child {
+      width: 10px;
+      height: 10px;
+      background-color: rgb(24, 123, 216);
+      border-radius: 50%;
+    }
+    /* 
+    @keyframes circle-loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      12% {
+        transform: rotate(45deg);
+      }
+      24% {
+        transform: rotate(90deg);
+      }
+      36% {
+        transform: rotate(135deg);
+      }
+      48% {
+        transform: rotate(180deg);
+      }
+      60% {
+        transform: rotate(225deg);
+      }
+      72% {
+        transform: rotate(270deg);
+      }
+      84% {
+        transform: rotate(315deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    } */
+
+    @keyframes circle-loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="ani-1">
+        <div class="ani-2"></div>
+        <div class="loading">Loading..</div>
+      </div>
+
+      <div class="second-ani">
+        <div class="second"></div>
+      </div>
+
+      <div class="third-ani">
+        <div class="third">
+          <div class="third-child"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
