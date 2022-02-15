@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Part-1</title>
+
+    <!-- ----------Bootstrap CDN----we can use jsDelivr-------- -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font-awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Google Font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Redressed&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+      }
+      .bs-cont {
+        background-color: rgb(32, 54, 54);
+        width: 100%;
+        height: 100%;
+      }
+      .bs-row {
+        background-color: rgba(148, 156, 223, 0.26);
+        box-shadow: 2px 2px 5px white;
+        height: 6%;
+      }
+
+      .menus {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+      }
+      .links {
+        margin-left: 8px;
+        text-decoration: none;
+        margin-top: 7px;
+        font-size: 20px;
+        font-family: "Redressed", cursive;
+        font-weight: 800;
+        color: rgb(176, 212, 187);
+      }
+      .links:hover {
+        color: white;
+      }
+      .bs-button-1 {
+        padding-top: 1px;
+        font-size: 20px;
+      }
+
+      .icon-div {
+        width: 100%;
+      }
+      #menu {
+        color: rgb(207, 218, 221);
+        font-size: 30px;
+        margin: 10px 35px;
+        width: fit-content;
+      }
+      #bull {
+        font-size: 30px;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- class="container-fluid" for using end-to-end screen -->
+      <!-- class="container" provide center part of screen -->
+
+      <!-- 
+      xs
+      sm
+      md
+      l
+      xl 
+    -->
+
+      <div class="container bs-cont">
+        <div class="row bs-row">
+          <div class="col-xs-4 col-sm-10 col-md-4 col-lg-4 bs-col">
+            <div class="icon-div">
+              <i class="fas fa-bullhorn icon-style" id="menu"></i>
+              <span id="bull">Bull-Horn</span>
+            </div>
+          </div>
+          <div class="col-xs-8 col-sm-2 col-md-8 col-lg-8 bs-col1">
+            <div class="menus">
+              <a href="#" class="links">Home</a>
+              <a href="#" class="links">Product</a>
+              <a href="#" class="links">Contact</a>
+              <a href="#" class="links">Help</a>
+              <button type="button" class="btn btn-secondary links bs-button-1">
+                Signup
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
