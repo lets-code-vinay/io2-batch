@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font-Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <title>BootStrap</title>
+  </head>
+  <style>
+    body {
+      background-color: aqua;
+    }
+    .container {
+      background-color: bisque;
+      height: fit-content;
+    }
+    .col {
+      padding: 0;
+    }
+
+    .myButton:hover {
+      background-color: blue;
+    }
+    /* .myButton {
+      background-color: rgb(96, 96, 192);
+    } */
+
+    .alert {
+      width: 50%;
+      margin: 10px 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa-regular fa-arrow-down-9-1"></i>
+              </a>
+              <a class="navbar-brand" href="#">IO-Classes</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary position-relative"
+                    >
+                      Inbox
+                      <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                      >
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Course
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">HTML</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">CSS</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">ReactJS</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Android/iOS</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Member</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary myButton"
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Bread-Crumb -->
+
+          <nav aria-label="breadcrumb" style="margin: 10px 36px">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+
+          <!-- ------Alert Types---- -->
+
+          <div class="alert alert-danger" role="alert">
+            Some one trying to access your account. Please change your password
+            as soon as possible
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            Your session will expire in 30secs
+
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
+          <!-- ------Alert Types End------ -->
+
+          <div class="div-all-components">
+            <h3>This is normal Button</h3>
+            <button type="button" class="btn btn-primary myButton" disabled>
+              Button-Normal
+            </button>
+
+            <h3>This is Button with outline</h3>
+            <button
+              type="button"
+              class="btn btn-outline-primary myButton"
+              disabled
+            >
+              Button-outline
+            </button>
+
+            Button Group with dropdown
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <button type="button" class="btn btn-primary">1</button>
+              <button type="button" class="btn btn-primary">2</button>
+
+              <div class="btn-group" role="group">
+                <button
+                  id="btnGroupDrop1"
+                  type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ----DropDown------ -->
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              My List
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa-brands fa-playstation"></i>Action</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="fa-solid fa-radiation"></i>Residence Evil</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa-solid fa-map-location-dot"></i>Lets Walk</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <!-- ----DropDown----- -->
+
+          <!-- ----Accordion---- -->
+          <div
+            class="accordion"
+            id="accordionExample"
+            style="width: 50%; margin: 10px auto"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Iron Man
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong> What are Iron Man's powers?</strong>
+                  Iron Man possesses a wealth of powers through his powered
+                  armor suit. These powers include super strength, the ability
+                  to fly, durability, and a number of weapons. The primary
+                  weapons used by Iron Man are rays that are shot from the palms
+                  of his gauntlets.
+                  <hr />
+                  <br />
+                  <strong
+                    >Who is Iron Man's alter ego and how did he get his powers?
+                  </strong>
+                  Iron Man gets his superpowers from his metallic suit of armor
+                  and other technologies invented by his alter ego Tony Stark.
+                  Tony is a genius engineer and wealthy owner of a technology
+                  company. Tony built the Iron Man suit when he was kidnapped
+                  and suffered an injury to his heart. The suit was meant to
+                  save his life and help him escape. Tony also has an improved
+                  artificial nervous system which gives him greater healing
+                  powers, super perception, and the ability to merge with his
+                  suit of armor.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Incredible Hulk
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>It Ain’t Easy Being Green</strong><br />
+                  Despite being one of the original Marvel characters, created
+                  around the same time as Spider-Man and Iron Man, the Hulk has
+                  always been on the verge of cancellation. In fact, his solo
+                  title was canned after just six issues in 1963.
+                  <hr />
+                  <br />
+                  <!-- Card------------- -->
+                  <div class="card" style="width: 18rem">
+                    <img src="hulk.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">The Incredible Hulk</h5>
+                      <p class="card-text">
+                        I'm the hulk, Super avenger. i will kill Kanak. Hulk
+                        Smash.
+                      </p>
+                      <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Captain America
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>HIS BIRTHDAY IS LITERALLY THE 4TH OF JULY.</strong
+                  ><br />
+                  Steve Rogers was literally born on Independence Day. In the
+                  early days of comics, there wasn’t necessarily a lot of
+                  nuance. Steve was mainly a character created to be patriotic
+                  and punch Hitler, so it’s not surprising they went really
+                  literally with his birthday. The choice is fitting, however,
+                  as over the years Cap has come to represent the best ideals of
+                  America. (A role which Chris Evans himself seems to be taking
+                  on in real life, too.) Plus, if you’re into astrology, you now
+                  know that he is a Cancer
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -----Accordion End----- -->
+
+          <!-- ----Collapse Button---- -->
+          <p>
+            <a
+              class="btn btn-primary"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Link with href
+            </a>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Button with data-bs-target
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              Some placeholder content for the collapse component. This panel is
+              hidden by default but revealed when the user activates the
+              relevant trigger.
+            </div>
+          </div>
+          <!-- ---Collapse Ends here---------- -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
