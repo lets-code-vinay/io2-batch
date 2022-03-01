@@ -1,0 +1,64 @@
+Javascript/EcmaScript (ES6) 2015
+
+1. What is javaScript?
+    javaScript is a programming language. It is used for server side and client side.
+   
+    ServerSide- NodeJS, ExpressJS 
+      DataBase- MongoDB, SQL
+    
+    Client-Side --> ReactJS, AngularJS, VeuJs, 
+                    ReactNative, 
+
+    Javascript is Single Threaded and Asynchronous Language
+
+
+2. History
+    It was developed in 1995 at NetScape by Brendan Eich.
+    
+    Name => 1. Mocha
+            2. LiveScript
+            3. EcmaScript (ES) - European Computer Manufacturing Association 
+            4. javaScript
+
+3. Javascript Engine:
+      Chrome:  V8
+      Mozilla Firefox: SpiderMonkey
+      Internet Explorer: Chakra
+      Safari: Nitro, SquirrelFish, Javascript Core,
+
+4. Extension
+    The extension of JS is ( .js )
+    In ReactJS we can use ( .jsx )
+
+5. How To use JS
+    1. By using internal <script><script/>
+
+       <script>
+          // a. Script used inside the head when we need to run our script at priority basis,
+          // Like 3rd party CDN (Content Delivery Network)
+        </script>
+
+        <script>
+          // a. Script used at bottom of the body, when we need want to run script just after rendering the HTML page
+        </script>
+
+    2. By using External JS file
+          <script src='myJavascript.js'></script>
+
+    3. browser console
+    4.  Online transpiler (JS fiddle)
+
+6. case:-
+    camelCase--> myNameIsVinay    <==== For FE
+    PascalCase  -> MyNameIsVinay  <==== as per requirement
+    Kebab-case  ->  my-name-is-vinay
+    snake_case   ->  my_name_is_vinay   <==== BE (Python)
+
+7. Comments
+    Single line comments ==> To define a small part or small piece of code 
+        // single line comments
+    Multiline Comments  ==> when we need to define some large piece of code
+        /**
+        * This is using for multiline comment
+        * This is comment sub title
+        */
