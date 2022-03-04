@@ -20,7 +20,7 @@ Enter the mark of 5 subject of student, and find the aggregate and percentage of
 */
 
 // Formula aggregate = totalMarks / number of subjects
-// Formula Percentage = obtainer marks / Total marks * 100
+// Formula Percentage = obtained marks / Total marks * 100
 
 // -4- /-----------------------------------------------------
 /*
