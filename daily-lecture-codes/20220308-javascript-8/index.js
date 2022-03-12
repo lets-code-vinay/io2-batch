@@ -14,14 +14,14 @@
 
 // Write a program to find a number is even or odd
 
-const num = prompt("Enter A number");
+// const num = prompt("Enter A number");
 
-// 2, 4, 6, 8, 10,... even
+// // 2, 4, 6, 8, 10,... even
 
-// 1, 3, 5, 7, 9, 11.. odd
+// // 1, 3, 5, 7, 9, 11.. odd
 
-if (num % 2 == 0) {
-  console.log(num + " is a even mumber");
-} else {
-  console.log(num + " is a ODD mumber");
-}
+// if (num % 2 == 0) {
+//   console.log(num + " is a even mumber");
+// } else {
+//   console.log(num + " is a ODD mumber");
+// }

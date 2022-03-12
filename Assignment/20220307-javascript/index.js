@@ -80,8 +80,7 @@
  */
 
 /**
- * 12. Write a program to find the absolute value of a number entered through the keyboard.
- *
+ * 12. Write a program to find the absolute value of a number entered through the keyboard
  */
 
 /**
