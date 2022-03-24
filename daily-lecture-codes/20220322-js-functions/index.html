@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+
+  <script>
+    /**
+     * Function defintion
+     * Function to print Even Odd
+     * */
+    function evenOdd(num) {
+      if (num % 2 == 0) {
+        return document.write(`${num} is an Even number1`, "<br/>");
+      }
+      if (num % 2 != 0) {
+        return document.write(`${num} is an Odd number1`, "<br/>");
+      }
+    }
+
+    /**
+     * ES6(Arrow function) Function defintion
+     * Function to print Even odd
+     * */
+    const evenOddES6 = (num) => {
+      // To find even odd
+      if (num % 2 == 0) {
+        return document.write(`${num} is an Even number2`, "<br/>");
+      }
+      if (num % 2 != 0) {
+        return document.write(`${num} is an Odd number2`, "<br/>");
+      }
+    };
+
+    /**
+     * Function defintion
+     * Function to print table
+     * */
+    function table(tab = 2) {
+      for (let i = 1; i <= 10; i++) {
+        document.write(`${tab} x ${i} = ${tab * i}`, "<br/>");
+      }
+    }
+
+    const factorial = (num = 5) => {
+      if (num > 20) {
+        return document.write("Kinldy enter value less than 20");
+      }
+
+      let fact = 1;
+      for (let i = 1; i <= num; i++) {
+        if (i < num) {
+          fact = fact * (num - i);
+        }
+
+        if (i == num) {
+          fact = fact * num;
+        }
+      }
+      document.write(fact);
+    };
+
+    const fac = prompt("Enter a number:");
+
+    factorial(fac);
+
+    // evenOddES6(10); // function call
+    // evenOddES6(15); // function call
+  </script>
+  <body></body>
+</html>
