@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple functions</title>
+  </head>
+  <body>
+    <h3>Please perform any following action</h3>
+    <ol>
+      <li>Leap year</li>
+      <li>Factorial Number</li>
+      <li>Table</li>
+      <li>Sruare Root</li>
+      <li>Power of</li>
+      <li>Even Odd</li>
+    </ol>
+
+    <script>
+      /**
+       * Main function
+       */
+      const userSelection = (opt) => {
+        if (opt > 7) return;
+
+        switch (Number(opt)) {
+          case 1:
+            findYear();
+            break;
+
+          case 2:
+            findFactorialNumber();
+            break;
+
+          case 3:
+            findEvenOddNumber();
+            break;
+
+          case 4:
+            printTable();
+            break;
+          default:
+            document.write(
+              "<br/>",
+              " OOps, you have selected a wrong option!!"
+            );
+            break;
+        }
+      };
+
+      /**
+       * SEt timeout for delay input
+       * */
+      setTimeout(() => {
+        const option = prompt("Please select an option");
+        userSelection(option);
+      }, 3000);
+
+      /**
+       * Finding leap year
+       */
+      function findYear() {
+        const year = prompt("Enter any year");
+
+        if (year % 4 == 0) {
+          document.write(`${year} is a leap Year!!!`);
+        } else {
+          document.write(`${year} is not a leap Year!!!`);
+        }
+      }
+
+      /**
+       * Finding factorial number
+       */
+      function findFactorialNumber() {
+        document.write(`Factorial number!!!`);
+      }
+
+      /**
+       * Finding Even Odd number
+       */
+      function findEvenOddNumber() {
+        document.write(`Even odd number!!!`);
+      }
+
+      /**
+       * Print Table
+       */
+      function printTable() {
+        document.write(`Printing table!!!`);
+      }
+    </script>
+  </body>
+</html>
