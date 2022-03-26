@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <ul id="vinay" class="anyClassName">
+        <li>abc</li>
+        <li>csa</li>
+
+        <li>cat</li>
+
+        <li>xyz</li>
+      </ul>
+    </div>
+    <script>
+      let element = document.createElement("li");
+      //   element.innerHTML = "<strong>hello</strong>";
+      let text = document.createTextNode("<strong>hello</strong>");
+      element.appendChild(text);
+
+      element.id = "newLi";
+      element.class = "newLi";
+      element.setAttribute("title", "This is ttile");
+
+      //   let newLi = document.getElementById("vinay");
+      //   let newLi = document.getElementsByClassName("anyClassName")[0];
+      //   let newLi = document.querySelector(".anyClassName");
+      let newLi = document.querySelector("#vinay");
+
+      newLi.appendChild(element);
+    </script>
+  </body>
+</html>
