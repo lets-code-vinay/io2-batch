@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>You can learn Array here</h1>
+    <script type="text/javascript">
+      //   const thisArray = [
+      //     "you",
+      //     true,
+      //     ["ab", "cd", ["March", "Jan", "Feb", "Dec"], "ef"],
+      //     "girl",
+      //     ["a", "b", "hello", [1, 2, 3]],
+      //   ];
+
+      //   document.write(`hello <b> ${thisArray.length}   </b> ${thisArray[3]}`);
+      //   console.log(`${thisArray[2][2][3][1]}`);
+
+      const calander = ["March", "Jan", "Feb", "Dec", { name: "kanak" }, ["p"]];
+
+      /**
+       * .length -> To Find the length of any array
+       * */
+      //   console.log(calander.length);
+
+      /**
+       * .at()  -> To find the element at specific index , it can provide negative value too
+       * */
+      document.write(`</br>.at --> ${calander.at(2)}`);
+      /**
+       * Array[index] : provide the element on specific value, it doesn't provide negative element/value
+       */
+      document.write(`</br> array[2] --> ${calander[2]}`);
+
+      /**
+       * Concat: to add two Arrays
+       */
+
+      const array1 = ["March", "Jan", "Feb", "Dec"];
+      const array2 = ["a", "b", "hello"];
+
+      // first method => try to use less as much
+      console.log(array1 + array2);
+
+      // second method -> using concat prototype
+      document.write(`</br> concat --> ${array1.concat(array2)}`);
+      console.log(array1.concat(array2));
+
+      // third method using flat prototype
+      console.log(
+        "concating arrays with flat operator",
+        [array1, array2, "spread"].flat()
+      );
+
+      /**
+       * ES6 => Spread operator (Cloning/concating using spread operator )
+       */
+      // Fourth method using spread operator
+      console.log("spread operator", [array1, ...array2, "spread"]);
+
+      /**
+       * -- Sort() -> use to sort elements alphabetically or in ascending/descending order
+       */
+      const months = ["Jun", "Jul", "Aug", "Apr", "March", "Jan", "Feb", "Dec"];
+      const numSort = [10, 15, 2, 3, 4, 78, 0, 12, 1, -2];
+
+      console.log("Sorting of months-->", months.sort());
+      console.log("Sorting of Number-->", numSort.sort());
+
+      /**
+       * Reverse() --> To reverse elements on any array from last to first and first to last
+       */
+      const alphabets = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+      // Number reversed in alphabetical mode
+      console.log("Number reverse()", numSort.reverse());
+
+      console.log("alphabets reverse()", alphabets.reverse());
+
+      /**
+       * IndexOf(number) -> to find index value of any element
+       */
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      console.log(`Here is the index of ${days[5]}: ${days.indexOf("Friday")}`);
+      console.log(
+        `Here is the index when no element found array: ${days.indexOf(
+          "saturday"
+        )}`
+      );
+
+      /*
+       * lastIndexOf() -> to find the index of any element in array
+       */
+      console.log(
+        `You can find the index value by using lastIndex of in ${days.lastIndexOf(
+          "Friday"
+        )}`
+      );
+
+      /**
+       * FindIndex() => to find any index value on some condition
+       */
+      const price = [10, 25, 30, 65, 85, 88, 2, 6, 74];
+      // const indexOfPrice = price.findIndex((rate) => rate > 80);
+      // const indexOfPrice = price.findIndex((rate) => rate >= 10 * 3);
+      const indexOfPrice = price.findIndex((rate) => rate > 100);
+
+      // console.log("findIndex with simple condition-->", indexOfPrice);
+      console.log("findIndex no value found-->", indexOfPrice);
+
+      /**
+       * includes() -> to check if the values is existed or not
+       */
+      const isDayExist = days.includes("Funday");
+      console.log("To check is the day(element) exist in array", isDayExist);
+    </script>
+  </body>
+</html>
