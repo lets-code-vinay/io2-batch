@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>You can learn Array here</h1>
+    <script type="text/javascript">
+      const array1 = ["March", "Jan", "Feb", "Dec"];
+
+      const alphabets = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const numbers = [5, 12, 8, 130, 44];
+
+      /**
+       * FindIndex ==> to find the index value by some condition
+       */
+      const findIndexValue = alphabets.findIndex((alpha) => alpha == "W");
+
+      console.log(`findIndex of value is:    ${findIndexValue}`);
+
+      const findIndexNumber = numbers.findIndex((num) => num == 44 && num < 45);
+      console.log(`the value of find index ${findIndexNumber}`);
+
+      const findIndexMulti = numbers.findIndex((multi) => multi * 2 >= 20);
+      console.log("value of multiplication", findIndexMulti);
+
+      /**
+       * Push -> To insert any value at the end of the array
+       */
+      // numbers.push(78);
+      // numbers.push("Sunil");
+      // numbers.push(true);
+      // numbers.push({ name: "Ravi" });
+      // console.log("The updated array with pushed item", numbers);
+
+      /**
+       * Pop : To remove the last item from the array
+       */
+      // numbers.pop();
+      // numbers.pop();
+      // console.log("The updated array after pop::", numbers);
+
+      /**
+       * unshift() ==> Add element at first index
+       */
+      numbers.unshift(78);
+      numbers.unshift(65);
+      numbers.unshift("Vinay");
+      console.log("The updated array after unshift::", numbers);
+
+      /**
+       * shift() ==> Remove element at first index
+       */
+      setTimeout(() => {
+        numbers.shift();
+        console.log("The updated array after shift::", numbers);
+      }, 10000);
+    </script>
+  </body>
+</html>

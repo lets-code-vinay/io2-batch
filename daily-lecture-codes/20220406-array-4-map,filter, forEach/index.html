@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>You can learn Array here</h1>
+    <script type="text/javascript">
+      const months = ["March", "Jan", "Feb", "Dec"];
+
+      const alphabets = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const numbers = [5, 12, 8, 130, 44];
+
+      const nestedNumbers = [
+        [10, 12, 8, 130, 44],
+        [5, 18, 10, 4.4],
+        [1.2, -8, 30, 4],
+      ];
+
+      // ----forEach : it iterates the array and alter the original array
+      // ----map
+      // ----filter
+      /**
+       * forEach()
+       */
+
+      // numbers.forEach((number, index) => {
+      //   console.log(number * 2, numbers);
+      // });
+
+      /**
+       * .map()  => iterates and array and  retuns the updated values
+       */
+      const newNumbers = nestedNumbers.map((element, index) => {
+        console.log(`this is inside array of ${index} `, element);
+        return element.map((insideArrayValue, insideIndex) => {
+          if (index == 1) {
+            return insideArrayValue * 3;
+          }
+
+          return insideArrayValue;
+        });
+      });
+
+      console.log(newNumbers);
+    </script>
+  </body>
+</html>
