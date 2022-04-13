@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>You can learn Array here</h1>
+    <script type="text/javascript">
+      const months = ["March", "Jan", "Feb", "Dec"];
+
+      const alphabets = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const numbers = [
+        10, 1, 2, -2, 3, 130, 44, 10, -5, -1, 10, 4.4, 1, 2, 8, 1, -89, -9, -7,
+        -12, -13, 3, 0, 44, 0, -1, -3, -3,
+      ];
+
+      // 1st,  one time
+      // 2nd, one time
+      // 3rd, one time
+      // th,  inifinity
+
+      // -----------------------
+      // typeof numbers != "string";
+
+      //------------------------------
+
+      const nestedNumbers = [
+        [10, 12, 8, 130, 44],
+        [5, 18, 10, 4.4],
+        [1.2, -8, 30, 4],
+      ];
+
+      // ----forEach : it iterates the array and alter the original array
+      // ----map
+      // ----filter
+      /**
+       * forEach()
+       */
+
+      // numbers.forEach((number, index) => {
+      //   console.log(number * 2, numbers);
+      // });
+
+      /**
+       * .map()  => iterates and array and  retuns the updated values
+       */
+      // const newNumbers = nestedNumbers.map((element, index) => {
+      //   return element.map((insideArrayValue, insideIndex) => {
+      //     if (index == 1) {
+      //       return insideArrayValue * 3;
+      //     }
+
+      //     return insideArrayValue;
+      //   });
+      // });
+      const numberOfArray = numbers.map((element, index) => {
+        if (element == 0 || element > 3 || element < -3) {
+          return `${element}th`;
+        }
+
+        if (element == 1 || element == -1) {
+          return `${element}st`;
+        }
+
+        if (element == 2 || element == -2) return `${element}nd`;
+
+        if (element == 3 || element == -3) return `${element}rd`;
+
+        return element;
+      });
+
+      console.log(`here is the quantity `, numberOfArray);
+
+      /**
+       * .filter():  used to iterate the array on some condition basis. it also creates a new array and doesn't alter or mutate original array.
+       */
+
+      const filteredNumbers = numbers
+        .filter((number, index) => number <= 0)
+        .map((number, index) => number * -10);
+
+      console.log("filteredNumbers-->", filteredNumbers);
+
+      const newWeek = days.filter((day) => day == "Sunday");
+      console.log("new week", newWeek);
+    </script>
+  </body>
+</html>

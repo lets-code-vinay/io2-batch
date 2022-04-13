@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>You can learn Array here</h1>
+    <script type="text/javascript">
+      const months = ["March", "Jan", "Feb", "Dec"];
+
+      const alphabets = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const numbers = [
+        -3, 101, 4.4, 1, 2, -2, 3, 130, 44, 10, -5, -1, 10, 4.4, 1, 2, 8, 1,
+        -89, -9, -7, -12, -13, 3, 0, 44, 0, -1, -3, -3,
+      ];
+
+      const newNumbers = [52, 181, 10, 44];
+
+      const nestedNumbers = [
+        [10, 12, 8, 130, 44],
+        [5, 18, 10, 4.4, [1.2, [10, 12, 8, 130, 44], -8, 30, 4]],
+        [1.2, -8, 30, 4],
+      ];
+
+      const flatMapNest = [10, 20, [10, 12, 8, 130, 44]];
+
+      /**
+       * .flat() --> flatten the array or make single array of nested array
+       */
+      const flatNestedArray = nestedNumbers.flat().flat().flat();
+      console.log(nestedNumbers, "flatNestedArray", flatNestedArray);
+
+      /**
+       * .flatMap() => It will flatten the array and perform some action like map does.
+       */
+      // const flatMapResult = flatMapNest.flatMap((nest) =>
+      //   console.log([nest * 2])
+      // );
+
+      /**
+       * .fill() => to fill elements in an array by replacing other elements
+       */
+
+      // const fillDataWithoutIndex = days.fill("Funday");
+      // const fillDataWith1stIndex = days.fill("Funday", 2);
+      // const fillDataInBetween = days.fill("Funday", 2, 5);
+
+      // console.log("fill fillDataWithoutIndex", fillDataWithoutIndex);
+      // console.log("fill fillDataWith1stIndex", fillDataWith1stIndex);
+      // console.log("fill fillDataInBetween", fillDataInBetween);
+
+      /**
+       * .isArray() used to find if the given object is array or not
+       * use Array.isArray() to find the array
+       */
+      console.log("Is this Array", Array.isArray(numbers[4]));
+
+      /**
+       * How to create any array
+       */
+      const array1 = []; // 1st Method
+      let array2 = new Array(); // 2nd Method
+
+      console.log(array2, "array2", Array.isArray(array2));
+
+      /**
+       * Array(index) use to create empty array with given length
+       */
+      const epmtyArray = [];
+      console.log("empty array", Array(6)); // <-----
+      console.log("empty array of", Array.of(6)); // <--- less use
+
+      /**
+       * .slice() used to cut any array from any specific index
+       */
+      const slicedDays = days.slice(2, 6);
+      console.log("slicedDays", slicedDays);
+
+      /**
+       * .splice() used to add or delete elements from the array
+       */
+      alphabets.splice(alphabets.length, 0, `Vinay`);
+
+      //  index == where to insert
+      // remove items == How many do you want to remove
+      // Add item == what do you want to add
+      console.log("alpha", alphabets);
+    </script>
+  </body>
+</html>

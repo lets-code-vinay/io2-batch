@@ -51,79 +51,69 @@
       ];
 
       const numbers = [
-        10, 1, 2, -2, 3, 130, 44, 10, -5, -1, 10, 4.4, 1, 2, 8, 1, -89, -9, -7,
-        -12, -13, 3, 0, 44, 0, -1, -3, -3,
+        -3, 101, 4.4, 1, 2, -2, 3, 130, 44, 10, -5, -1, 10, 4.4, 1, 2, 8, 1,
+        -89, -9, -7, -12, -13, 3, 0, 44, 0, -1, -3, -3,
       ];
 
-      // 1st,  one time
-      // 2nd, one time
-      // 3rd, one time
-      // th,  inifinity
-
-      // -----------------------
-      // typeof numbers != "string";
-
-      //------------------------------
+      const newNumbers = [52, 181, 10, 44];
 
       const nestedNumbers = [
         [10, 12, 8, 130, 44],
-        [5, 18, 10, 4.4],
+        [5, 18, 10, 4.4, [1.2, [10, 12, 8, 130, 44], -8, 30, 4]],
         [1.2, -8, 30, 4],
       ];
 
-      // ----forEach : it iterates the array and alter the original array
-      // ----map
-      // ----filter
       /**
-       * forEach()
+       * .find() ==> returns the value which found first value in the array after fulfilling the conditions
        */
-
-      // numbers.forEach((number, index) => {
-      //   console.log(number * 2, numbers);
-      // });
+      const findNum = numbers.find((number, index) => number % 2 == 0);
+      console.log("find -->", findNum);
 
       /**
-       * .map()  => iterates and array and  retuns the updated values
+       * .every() --> retrun boolean. true: when all the elements fulfill the condition, false: when any element fails to fulfill condition
        */
-      // const newNumbers = nestedNumbers.map((element, index) => {
-      //   return element.map((insideArrayValue, insideIndex) => {
-      //     if (index == 1) {
-      //       return insideArrayValue * 3;
-      //     }
-
-      //     return insideArrayValue;
-      //   });
-      // });
-      const numberOfArray = numbers.map((element, index) => {
-        if (element == 0 || element > 3 || element < -3) {
-          return `${element}th`;
-        }
-
-        if (element == 1 || element == -1) {
-          return `${element}st`;
-        }
-
-        if (element == 2 || element == -2) return `${element}nd`;
-
-        if (element == 3 || element == -3) return `${element}rd`;
-
-        return element;
-      });
-
-      console.log(`here is the quantity `, numberOfArray);
+      const everyNum = alphabets.every(
+        (alpha) => typeof alpha == "string" || typeof alpha == "number"
+      );
+      console.log("Every() -->", everyNum);
 
       /**
-       * .filter():  used to iterate the array on some condition basis. it also creates a new array and doesn't alter or mutate original array.
+       * .some()  --> return true when any one of the element fulfill the condition
        */
+      const someNum = newNumbers.some((number) => number % 2 !== 0);
+      console.log("some -->", someNum);
 
-      const filteredNumbers = numbers
-        .filter((number, index) => number <= 0)
-        .map((number, index) => number * -10);
+      /**
+       * .reverse()  --> return reveresed string
+       */
+      const reverseString = alphabets.reverse();
 
-      console.log("filteredNumbers-->", filteredNumbers);
+      console.log("alphabets reversed", reverseString);
 
-      const newWeek = days.filter((day) => day == "Sunday");
-      console.log("new week", newWeek);
+      /**
+       * .join()  --> return joined string as per requirement
+       */
+      const joinString = alphabets.join("");
+      console.log("alphabets joinString", joinString, joinString.length);
+
+      /**
+       * Example
+       */
+      const wednesday = days[3].split("").reverse().join("");
+      console.log("wednesday", wednesday);
+
+      /**
+       * toString() : return the element in form of string
+       */
+      const toStringNumber = days.toString();
+      console.log("toString-->", toStringNumber);
+      console.log("toString-->", toStringNumber.split(",").join(""));
+
+      /**
+       * .flat() --> flatten the array or make single array of nested array
+       */
+      const flatNestedArray = nestedNumbers.flat().flat().flat();
+      console.log(nestedNumbers, "flatNestedArray", flatNestedArray);
     </script>
   </body>
 </html>
