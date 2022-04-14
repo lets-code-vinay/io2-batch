@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>You can learn Object here</h1>
+    <script>
+      /**
+       * What is an Object?
+       *
+       * Object has some set of pair in keys and value with colon (:). wrapped by curly-braces({}) and seperated by comma (,)
+       */
+      /**
+       * What is Difference between JSON and Object?
+       *
+       * There is no big difference between JSON and Object both has curly-braces, colon, key-value pair,
+       * But only difference is in JSON Key is wrapped with quotes and JSOn is widely get from  API response.
+       *
+       */
+      /**
+       * Widely used Proptotype of Objec
+       // .keys()
+      // .values()
+      // .freeze()
+      // .isFrozen(),
+      // .seal()
+      // .isSealed()
+      // .assign()
+      // .create()
+      */
+      const animal = {
+        dog: "Tommy",
+        cat: 102,
+        rat: false,
+        man: ["Robert", "Mike"],
+        obj: { name: "Reeta", id: 545 },
+        und: undefined,
+        nullValue: null,
+        // objFun: fuuncName(),
+      };
+
+      const json = {
+        id: 1,
+        name: "Leanne Graham",
+        username: "Bret",
+        email: "Sincere@april.biz",
+        address: {
+          street: "Kulas Light",
+          suite: "Apt. 556",
+          city: "Gwenborough",
+          zipcode: "92998-3874",
+          geo: {
+            lat: "-37.3159",
+            lng: "81.1496",
+          },
+        },
+      };
+
+      console.log(json.addresss.geo.lng);
+
+      // console.log(animal);
+    </script>
+  </body>
+</html>
