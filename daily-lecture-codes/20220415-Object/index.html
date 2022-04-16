@@ -17,10 +17,140 @@
       const newObj2 = Object.create({});
 
       newObj0.name = "Ravi";
+      newObj0.age = "28";
+
       newObj1.address = { city: "Ludhiana", pincode: "141016" };
 
-      console.log(newObj0);
-      console.log(newObj1);
+      // console.log(newObj0);
+      // console.log(newObj1);
+
+      /**
+       * Destrucure of Object
+       */
+      const { address = {} } = newObj1 || {};
+      const cloneObj = { ...newObj0, address };
+      // console.log("cloneObj", cloneObj);
+
+      const moreClone = {
+        ...cloneObj,
+        education: {
+          priamry: "yes",
+          highSChool: "xyz school",
+          hss: "abc school",
+          graduation: "alpha college",
+          master: false,
+          contact: { phone: "+91 8989898989", email: "abc@abc.com", id: 254 },
+        },
+      };
+      // console.log("moreClone", moreClone);
+
+      /**
+       * JSON example for experiment
+       */
+
+      const jsonData = [
+        {
+          id: "0001",
+          type: "donut",
+          name: "Cake",
+          ppu: 0.55,
+          batters: {
+            batter: [
+              { id: "1001", type: "Regular" },
+              { id: "1002", type: "Chocolate" },
+              { id: "1003", type: "Blueberry" },
+              { id: "1004", type: "Devil's Food" },
+            ],
+          },
+          topping: [
+            { id: "5001", type: "None" },
+            { id: "5002", type: "Glazed" },
+            { id: "5005", type: "Sugar" },
+            { id: "5007", type: "Powdered Sugar" },
+            { id: "5006", type: "Chocolate with Sprinkles" },
+            { id: "5003", type: "Chocolate" },
+            { id: "5004", type: "Maple" },
+          ],
+        },
+        {
+          id: "0002",
+          type: "donut",
+          name: "Raised",
+          ppu: 0.55,
+          batters: {
+            batter: [{ id: "1001", type: "Regular" }],
+          },
+          topping: [
+            { id: "5001", type: "None" },
+            { id: "5002", type: "Glazed" },
+            { id: "5005", type: "Sugar" },
+            { id: "5003", type: "Chocolate" },
+            { id: "5004", type: "Maple" },
+          ],
+        },
+        {
+          id: "0003",
+          type: "donut",
+          name: "Old Fashioned",
+          ppu: 0.55,
+          batters: {
+            batter: [
+              { id: "1001", type: "Regular" },
+              { id: "1002", type: "Chocolate" },
+            ],
+          },
+          topping: [
+            { id: "5001", type: "None" },
+            { id: "5002", type: "Glazed" },
+            { id: "5003", type: "Chocolate" },
+            { id: "5004", type: "Maple" },
+          ],
+        },
+      ];
+      const [, , thirdEle = {}] = jsonData || [];
+      const { batters: { batter = [] } = {} } = thirdEle || {};
+      const [first = {}, second = {}] = batter || [];
+      const { id = "", type = "" } = first || [];
+      console.log("id-- %s--type", id, type);
+
+      // 1st method
+      // console.log(
+      //   "jsonData[0].topping[5].type---->",
+      //   jsonData[0].topping[5].type,
+      //   "-->",
+      //   jsonData[0].batters.batter[2].type
+      // );
+
+      // Object Chaining
+      // console.log("OPtional Chaining", jsonData[0]?.batters?.batter[2]?.type);
+
+      const data2 = {
+        boolean_key: "--- true\n",
+        empty_string_translation: "",
+        key_with_description:
+          "Check it out! This key has a description! (At least in some formats)",
+        "key_with_line-break": "This translations contains\na line-break.",
+        nested: {
+          deeply: {
+            key: "Wow, this key is nested even deeper.",
+          },
+          key: "This key is nested inside a namespace.",
+        },
+        null_translation: null,
+        pluralized_key: {
+          one: "Only one pluralization found.",
+          other: "Wow, you have %s pluralizations!",
+          zero: "You have no pluralization.",
+        },
+        sample_collection: ["first item", "second item", "third item"],
+        simple_key: "Just a simple key with a simple message.",
+        unverified_key:
+          "This translation is not yet verified and waits for it. (In some formats we also export this status)",
+      };
+      // console.log(data2?.nested?.deeply?.key);
+
+      const { nested: { deeply: { key = "-" } = {} } = {} } = data2 || {};
+      console.log(key);
     </script>
   </body>
 </html>
