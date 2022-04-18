@@ -147,10 +147,12 @@
         unverified_key:
           "This translation is not yet verified and waits for it. (In some formats we also export this status)",
       };
-      // console.log(data2?.nested?.deeply?.key);
 
-      const { nested: { deeply: { key = "-" } = {} } = {} } = data2 || {};
-      console.log(key);
+      const objectValue = data2?.pluralized_key?.other;
+      console.log("objectValue-->", objectValue);
+
+      const { nested: { deeply: { key = "" } = {} } = {} } = data2 || {};
+      console.log("key-->", key);
     </script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>You can learn Object here</h1>
+    <script>
+      const data2 = {
+        boolean_key: "--- true\n",
+        empty_string_translation: "",
+        key_with_description:
+          "Check it out! This key has a description! (At least in some formats)",
+        "key_with_line-break": "This translations contains\na line-break.",
+        nested: {
+          deeply: {
+            key: "Wow, this key is nested even deeper.",
+          },
+          key: "This key is nested inside a namespace.",
+        },
+        null_translation: null,
+        pluralized_key: {
+          one: "Only one pluralization found.",
+          other: "Wow, you have %s pluralizations!",
+          zero: "You have no pluralization.",
+        },
+        sample_collection: ["first item", "second item", "third item"],
+        simple_key: "Just a simple key with a simple message.",
+        unverified_key:
+          "This translation is not yet verified and waits for it. (In some formats we also export this status)",
+      };
+      const obj1 = {
+        make: "Ford",
+        model: "Mustang",
+        year: 1969,
+      };
+
+      const obj2 = {
+        color: "red",
+        wheels: 4,
+        engine: { cylinders: 4, size: 2.2 },
+      };
+
+      /**
+       * Object.assign() : is used to assign any value to the object or add any object inside another  object
+       */
+      // const obj3 = Object.assign(obj2, obj1, data2.nested);
+      // console.log(obj3);
+
+      /**
+       * ES6 -->  spread (...object) is used to clone any object
+       */
+      // const obj4 = {
+      //   ...obj1,
+      //   ...obj2,
+      //   animal: { dog: "Great Dane", cat: "Persian" },
+      // };
+
+      /**
+       * Types of consoles
+       */
+      // console.log(obj4);
+      // console.error(obj4);
+      // console.warn(obj4);
+      // console.dir(obj4);
+      // console.table(obj4);
+      // console.time(obj4);
+      // console.timeEnd(obj4);
+
+      /**
+       * Object.freeze({}) used to freeze object so it can not be changed or altered
+       */
+      // const objName = Object.freeze({});
+
+      const objFreeze = Object.freeze({
+        color: "red",
+        wheels: 4,
+        engine: { cylinders: 4, size: 2.2 },
+      });
+
+      const newObj = { ...objFreeze };
+
+      newObj.wheels = 5;
+      newObj.color = "Blue";
+      newObj.id = 10;
+
+      console.log("newObj-->", newObj, objFreeze);
+
+      /**
+       * Object.isFrozen() : used to verify whether object is frozen or not
+       */
+
+      console.log(Object.isFrozen(newObj));
+      console.log(Object.isFrozen(objFreeze));
+    </script>
+  </body>
+</html>
