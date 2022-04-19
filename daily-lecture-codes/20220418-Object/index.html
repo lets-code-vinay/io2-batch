@@ -87,14 +87,127 @@
       newObj.color = "Blue";
       newObj.id = 10;
 
-      console.log("newObj-->", newObj, objFreeze);
+      objFreeze.id = 100;
+
+      // console.log("newObj-->", newObj);
+      // console.log("objFreeze -->", objFreeze);
 
       /**
        * Object.isFrozen() : used to verify whether object is frozen or not
        */
 
-      console.log(Object.isFrozen(newObj));
-      console.log(Object.isFrozen(objFreeze));
+      // console.log(Object.isFrozen(newObj));
+      // console.log(Object.isFrozen(objFreeze));
+
+      /**
+       * Object.seal(): used to seal any object, Object can changed
+       * an new element can not be inserted in the object
+       */
+      const weekDays = {
+        day1: "Sun",
+        day2: "Mon",
+        day3: "Tues",
+        day4: "Wed",
+      };
+
+      Object.seal(weekDays);
+
+      weekDays.day2 = "Monday";
+      weekDays.day4 = "Wednesday";
+      weekDays.day5 = "Thursday";
+
+      // console.log("weekdays", weekDays);
+
+      /**
+       * Object.isSealed() : used to check if the object is sealed or not.
+       */
+      // console.log("isSealed Object-->", Object.isSealed(weekDays));
+      // console.log("isFrozen Object-->", Object.isFrozen(weekDays));
+
+      // console.log("isSealed Object 2-->", Object.isSealed(objFreeze));
+      // console.log("isSealed Object 3-->", Object.isSealed(data2));
+
+      const weekDays2 = {
+        day1: "Sun",
+        day2: "Mon",
+        day3: "Tues",
+        day4: "Wed",
+        day5: "xxx",
+      };
+      weekDays2.day5 = "Thursday";
+      weekDays2.day6 = "Friday";
+
+      /**
+       * Object.keys(): to get all the keys into array
+       */
+      const allKeys = Object.keys(weekDays2);
+      console.log("allkeys-->", allKeys);
+
+      const TABS = {
+        TAB1: { label: "Tab1", value: "TAB1", text: "Home" },
+        TAB2: { label: "Tab2", value: "TAB2", text: "About" },
+        TAB3: { label: "Tab3", value: "TAB3", text: "Contact" },
+      };
+
+      console.log(Object.keys(TABS));
+
+      /**
+       * Object.values(): to get all the keys into array
+       */
+      const allValues = Object.values(weekDays2).filter(
+        (day) => day.length > 3
+      );
+
+      console.log("values--->", allValues);
+      // console.log(
+      //   "Tabs-->",
+      //   Object.values(TABS).map((tab) => {
+      //     console.log("hello", tab.label);
+      //   })
+      // );
+
+      const tabsValues = Object.values(TABS); // output : [{ label: "Tab1", value: "TAB1" }, { label: "Tab2", value: "TAB2" }]
+      const labels = tabsValues.map((tab) => tab.text);
+      const text = labels.filter((text) => text == "About");
+
+      console.log("here is tabs label", text);
+
+      /**
+       * SetTimeout() used to delay any action by given seconds
+       */
+      // setTimeout(() => {
+      //   delete weekDays2.day5;
+      //   weekDays2.day5 = "Thursday";
+      //   weekDays2.day6 = "Friday";
+
+      //   console.log("weekDays2 with delete", weekDays2);
+      // }, 2000);
+
+      /**
+       * delete: to delete/remove any property from object
+       */
+      const formData = {
+        firstName: "Ravi",
+        lastName: "Sharma",
+        email: "xyz@xyz.com",
+        password: "ravi123$%$",
+        confirmPassword: "ravi123$%$",
+      };
+
+      delete formData.confirmPassword;
+      console.log(formData);
+
+      /**
+       * setInterval() : used to continue to perform some action by given time untill it is not cleared
+       */
+      // const interval = () => {
+      //   setInterval(() => {
+      //     console.log("hello");
+      //   }, 3000); // 1000 == 1000mili seconds
+      //   // 1000ms == 1 seconds
+      // };
+
+      // console.log(interval());
     </script>
   </body>
 </html>
