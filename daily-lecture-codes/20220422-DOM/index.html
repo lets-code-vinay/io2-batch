@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1>DOM</h1>
+    <h3>Document Object Model</h3>
+
+    <div class="xyz newClass">
+      <div class="abc newClass">
+        <span id="spanId" class="xyz newClass">
+          <p class="pClass">Heloo</p>
+        </span>
+      </div>
+      <div class="newClass">3rd div</div>
+      <img />
+    </div>
+
+    <script>
+      const spanTag = document.getElementsByTagName("div");
+      const [, secondDiv, ...rest] = spanTag || [];
+      console.log(secondDiv);
+
+      const elementsWithClass = document.getElementsByClassName("newClass");
+      console.log(elementsWithClass);
+
+      /**
+       * 1. document.getElementByID('IdName')
+       * 2. document.getElementsByClassName('className')
+       * 3. document.getElementsByTagName('tagName') // 'h4', 'p', 'div', 'nav'
+       * 4.
+       * 5. query Selctors
+       *    a. To get class: document.querySelector('.className') //('.newClass')
+       *    b. To get all class: document.querySelectorAll('.className')  return Array//('.newClass')
+       *
+       *    c. To get Id: document.querySelector('#idName') //('#spanId')
+       *
+       *    d. To get tag: document.querySelector('tagName') // ('div') ('p') ('span') ('h1')
+       *    b. To get all Tag: document.querySelectorAll('tagName') // return Array ('div') ('p') ('span') ('h1')
+       *
+       */
+    </script>
+  </body>
+</html>

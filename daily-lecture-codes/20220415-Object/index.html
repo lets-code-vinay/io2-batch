@@ -153,6 +153,41 @@
 
       const { nested: { deeply: { key = "" } = {} } = {} } = data2 || {};
       console.log("key-->", key);
+
+      // what is object
+
+      const car = {
+        swiftDezire: {
+          model: "Maruti",
+          name: "Swift Dezire",
+          color: "White",
+          manufacturedYear: "2012",
+          engine: "4 stroke",
+          cylinder: 4,
+          power: ["200nm", "190bhp"],
+        },
+        alto: {
+          model: "Maruti Suzuki",
+          name: "Alto k100",
+          color: "Black",
+          manufacturedYear: "2010",
+          engine: "4 stroke",
+          cylinder: 4,
+          power: ["200nm", "180bhp"],
+        },
+      };
+
+      const { swiftDezire: { power = [] } = {} } = car || {};
+      const [firstPower, secondPower, ...rest] = power || [];
+      power.push("120nm");
+      power.push("1/8");
+
+      car.swiftDezire.owner = "Sunil";
+      car.swiftDezire.owner = "Ravi";
+      car.swiftDezire.model = "Maruti Suzuki";
+      delete car.swiftDezire.manufacturedYear;
+
+      console.log(car.swiftDezire);
     </script>
   </body>
 </html>
