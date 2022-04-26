@@ -359,10 +359,11 @@
                   @₹12,377 Upto 25% Off, No Cost EMI. Get extra benefits up to
                   ₹10,000 & enjoy flexible cancellations & date-change too! An
                   Exclusive Photo-shoot! Free Snorkeling Trip.<br />
-                </div>
-                <a href="#" class="btn btn-primary" id="card-buttons"
-                  >Go Maldives</a>
-              </p>
+                  <a href="#" class="btn btn-primary" id="card-buttons"
+                    >Go Maldives</a
+                  >
+                </p>
+              </div>
             </div>
             <!-- Card -1 ends-->
 
@@ -536,7 +537,7 @@
 
             <!-- Card -4 -->
             <div class="card" style="width: 15rem" id="cardH4">
-              <h5 class="card-title" id="price-title" >Family</h5>
+              <h5 class="card-title" id="price-title">Family</h5>
               <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted price-subtitle">
                   Family friendly hotels
@@ -609,7 +610,9 @@
           <div class="social-medias">
             <a href="#"> <i class="fa-brands fa-facebook-square"></i></a>
             <a href="#"> <i class="fa-brands fa-instagram-square"></i></a>
-            <a href="#" class="fa-brands"> <i class="fa-brands fa-twitter-square"></i></a>
+            <a href="#" class="fa-brands">
+              <i class="fa-brands fa-twitter-square"></i
+            ></a>
             <a href="#"> <i class="fa-brands fa-pinterest-square"></i></a>
             <a href="#"> <i class="fa-brands fa-whatsapp-square"></i></a>
             <a href="#"> <i class="fa-brands fa-youtube-square"></i></a>
@@ -659,63 +662,86 @@
       // console.log(targetingID.innerText);
 
       /***
-       * How to target elements by Tags
+       * How to target elements by CLass
        */
-       const targetingClass = document.getElementsByClassName("fa-brands");
+      const targetingClass = document.getElementsByClassName("fa-brands");
       // console.dir(targetingClass[2]);
 
-
-      /***
+      /**
        * How to target elements by Tags
        */
-       const targetingDiv = document.getElementsByTagName("div");
+      const targetingDiv = document.getElementsByTagName("div");
       // console.dir(targetingDiv[59]);
 
-       /***
+      /**
        * How to target elements by Name
        */
-      const targetingName = document.getElementsByName('inputName')
+      const targetingName = document.getElementsByName("inputName");
       // console.log(targetingName)
 
-
-       /***
+      /***
        * How to target elements attribute of any element
        * 1. target element
        * 2. target attribute from that element
        */
-      const targetingcardH4 = document.getElementById('cardH4');
-      const targetingAttri = targetingcardH4.getAttribute('style')
+      const targetingcardH4 = document.getElementById("cardH4");
+      const targetingAttri = targetingcardH4.getAttribute("style");
       // console.log(targetingAttri)
 
-
-       /***
+      /***
        * How to target elements with TAGS using query selector
        * 1. querySelectorAll() : return arrays of tags
        * 2. querySelector(): return first found element
        */
-      const qsTags = document.querySelectorAll('button')
+      const qsTags = document.querySelectorAll("button");
       // console.log(qsTags)
 
-      const qsFirstTags = document.querySelector('button')
+      const qsFirstTags = document.querySelector("button");
       // console.log(qsFirstTags.innerHTML)
 
-             /***
+      /***
        * How to target elements with CLASSNAME using query selector
-       * 1. querySelectorAll() : return arrays 
+       * 1. querySelectorAll() : return arrays
        * 2. querySelector(): return first found element
        */
-       const qsClass = document.querySelectorAll('.services')
+      const qsClass = document.querySelectorAll(".services");
       // console.log(qsClass)
 
-      const qsFirstClass = document.querySelector('.services')
+      const qsFirstClass = document.querySelector(".services");
       // console.log(qsFirstClass)
 
+      const qsId = document.querySelectorAll("#card-buttons");
+      // console.log(qsId[2].innerText = 'Go Japan')
 
-      const qsId = document.querySelectorAll('#card-buttons')
-      console.log(qsId[2].innerText = 'Go Japan')
+      /**
+       * How to target all nodes and elements with * using query selector
+       * 1. querySelectorAll('*') : return all nodes in arrays
+       * 2. querySelector('*'): return first found element
+       */
+      const qsAll = document.querySelectorAll("*");
+      // console.log(qsAll)
 
-      
+      const qs = document.querySelector("*");
+      // console.log(qs)
 
+      /**
+       * How to target all attributes using query selector
+       * 1. querySelectorAll('[attributeName]') : return all nodes in arrays
+       * 2. querySelector('*'): return first found element
+       */
+      const qsAttributes = document.querySelectorAll(".btn");
+      const updatedAttri = [...new Set(qsAttributes)];
+
+      updatedAttri.map((attri) => {
+        if (attri.id == "card-buttons" && attri.innerText == "Go Greece") {
+          attri.innerText = "Go Rome";
+          attri.style.color = "yellow";
+          attri.style.backgroundColor = "skyblue";
+        }
+      });
+
+      const qsAttribute = document.querySelector("[href]");
+      // console.log(qsAttribute)
     </script>
   </body>
 </html>
