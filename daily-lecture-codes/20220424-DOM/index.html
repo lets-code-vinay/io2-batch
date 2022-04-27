@@ -724,14 +724,12 @@
       const qs = document.querySelector("*");
       // console.log(qs)
 
-      /**
-       * How to target all attributes using query selector
-       * 1. querySelectorAll('[attributeName]') : return all nodes in arrays
-       * 2. querySelector('*'): return first found element
-       */
       const qsAttributes = document.querySelectorAll(".btn");
       const updatedAttri = [...new Set(qsAttributes)];
 
+      /**
+       * Updating elements dynamically using JavaScript
+       */
       updatedAttri.map((attri) => {
         if (attri.id == "card-buttons" && attri.innerText == "Go Greece") {
           attri.innerText = "Go Rome";
@@ -740,8 +738,71 @@
         }
       });
 
+      /**
+       * How to target all attributes using query selector
+       * 1. querySelectorAll('[attributeName]') : return all nodes in arrays
+       * 2. querySelector('*'): return first found element
+       */
       const qsAttribute = document.querySelector("[href]");
       // console.log(qsAttribute)
+
+      /**
+       * How to target Parent of any element
+       */
+      const buttonTarget = document.getElementsByClassName("btn btn-primary");
+      // console.log("self", buttonTarget[1].innerText);
+      // console.dir(buttonTarget[1].parentElement.innerHTML);
+
+      /**
+       * How to target child and children of element
+       */
+      let container = document.querySelectorAll(".container");
+      container = [...new Set(container)];
+      // console.log(container);
+
+      //first Child
+      const firstChild = container[1].firstChild;
+      // console.log("firstChild==>", firstChild);
+
+      //first Element Child
+      const firstElementChild = container[1].firstElementChild;
+      // console.log(firstElementChild);
+
+      // Get nested child of element
+      // console.dir(
+      //   firstElementChild.firstElementChild.firstElementChild.innerText
+      // );
+
+      // child Nodes
+      const children12 = container[1].children;
+      // console.log("return 2nd element of children", children12[1]);
+      // console.log("children12", children12[1].children[0].children[2].children);
+
+      // child Nodes
+      const childNodes = container[1].childNodes;
+      // console.log("childNodes", childNodes);
+
+      //last Child
+      const lastChild = container[1].lastChild;
+      // console.log("lastChild==>", lastChild);
+
+      //last Element Child
+      const lastElementChild =
+        container[1].lastElementChild.lastElementChild.lastElementChild;
+      // console.log(lastElementChild);
+
+      /**
+       * Targetting siblings
+       */
+      let siblings = document.querySelectorAll(".cards");
+      siblings = [...new Set(siblings)];
+
+      // previous siblings
+      // console.log("prevEleSibling", siblings[2].previousElementSibling);
+      // console.log("ElementEleSibling", siblings[2].nextElementSibling);
+
+      console.log("prevSibling", siblings[2].previousSibling);
+      console.log("ElementSibling", siblings[2].nextSibling);
     </script>
   </body>
 </html>
