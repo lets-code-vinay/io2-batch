@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Create-append</title>
+  </head>
+  <body>
+    <h2>Create/Append/</h2>
+
+    <ul class="list-item" id="id-list">
+      <li id="list-1" class="list-class">Pikachu</li>
+      <li id="list-2" class="list-class">Grey-ninja</li>
+      <li id="list-3" class="list-class">Treecho</li>
+      <li id="list-4" class="list-class">Torchik</li>
+      <li id="list-5" class="list-class">Squirtel</li>
+    </ul>
+
+    <script>
+      const getUL = document.getElementById("id-list");
+
+      let magikarp = document.createElement("li");
+      magikarp.innerText = "Magikarp";
+
+      getUL.prepend(magikarp);
+
+      let enterPokemon = document.createElement("input");
+      enterPokemon.id = "pokemon-input";
+      enterPokemon.className = "pokemon-input-class";
+      enterPokemon.setAttribute("placeholder", "Enter the name of pokemon");
+      enterPokemon.setAttribute("type", "text");
+      enterPokemon.style.backgroundColor = "cyan";
+      enterPokemon.style.borderRadius = "5px";
+      enterPokemon.style.border = "1px solid green";
+      enterPokemon.style.color = "white";
+
+      console.log(enterPokemon);
+
+      getUL.append(enterPokemon);
+    </script>
+  </body>
+</html>
