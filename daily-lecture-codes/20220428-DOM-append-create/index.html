@@ -9,6 +9,8 @@
   <body>
     <h2>Create/Append/</h2>
 
+    <div id="div-id"></div>
+
     <ul class="list-item" id="id-list">
       <li id="list-1" class="list-class">Pikachu</li>
       <li id="list-2" class="list-class">Grey-ninja</li>
@@ -38,6 +40,94 @@
       console.log(enterPokemon);
 
       getUL.append(enterPokemon);
+
+      const getDivId = document.getElementById("div-id");
+
+      let div1 = document.createElement("div");
+      div1.className = "div1";
+      div1.id = "div1-1";
+      div1.style.backgroundColor = "#BCD6F8";
+      div1.style.width = "500px";
+      div1.style.height = "200px";
+      div1.style.border = "1px solid black";
+      div1.style.borderRadius = "5px";
+      // div1.style.display = "flex";
+      // div1.style.flexDirection = "column";
+
+      getDivId.append(div1);
+
+      // Creating first name input box
+      let inputName = document.createElement("input");
+      inputName.className = "input-class";
+      inputName.id = "input-first-name";
+      inputName.setAttribute("type", "text");
+      inputName.setAttribute("placeholder", "Enter First Name");
+      inputName.style.backgroundColor = "white";
+      inputName.style.border = "1px solid grey";
+      inputName.style.borderRadius = "5px";
+      inputName.style.marginTop = "5px";
+      inputName.style.marginLeft = "5px";
+
+      div1.append(inputName);
+
+      // Creating last name input box
+      let inputLastName = document.createElement("input");
+      inputLastName.className = "input-class";
+      inputLastName.id = "input-last-name";
+      inputLastName.setAttribute("type", "text");
+      inputLastName.setAttribute("placeholder", "Enter last Name");
+      inputLastName.style.backgroundColor = "white";
+      inputLastName.style.border = "1px solid grey";
+      inputLastName.style.borderRadius = "5px";
+      inputLastName.style.marginTop = "5px";
+      inputLastName.style.marginLeft = "5px";
+
+      div1.append(inputLastName);
+
+      // Creating phone input box
+      let inputPhone = document.createElement("input");
+      inputPhone.className = "input-class";
+      inputPhone.id = "input-phone";
+      inputPhone.setAttribute("type", "number");
+      inputPhone.setAttribute("placeholder", "Enter phone number");
+      inputPhone.style.backgroundColor = "white";
+      inputPhone.style.border = "1px solid grey";
+      inputPhone.style.borderRadius = "5px";
+      inputPhone.style.marginTop = "5px";
+      inputPhone.style.marginLeft = "5px";
+
+      div1.append(inputPhone);
+
+      // Creating password input box
+      let innerHTMLspan = document.createElement("span");
+
+      innerHTMLspan.innerHTML = `<input type=${
+        false ? "password" : "text"
+      } placeholder='Enter your password'/>`;
+      div1.append(innerHTMLspan);
+
+      // Creating Submit button
+      let submit = document.createElement("input");
+      submit.className = "input-class";
+      submit.id = "submit-button";
+      submit.value = "Sign Up";
+      submit.setAttribute("type", "button");
+      submit.style.backgroundColor = "white";
+      submit.style.border = "1px solid grey";
+      submit.style.borderRadius = "5px";
+      submit.style.marginTop = "5px";
+      submit.style.marginLeft = "5px";
+
+      div1.prepend(submit);
+
+      let text = document.createElement("p");
+      text.className = "text";
+      text.id = "text-id";
+
+      text.innerHTML =
+        "<span class='span' id='text-span' style='color: red'>Terms & Conditions</span>";
+
+      div1.append(text);
     </script>
   </body>
 </html>
