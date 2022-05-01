@@ -7,7 +7,7 @@
     <title>DOM-Create-append</title>
   </head>
   <body>
-    <h2>Create/Append/</h2>
+    <h2 class="h2Tag">Create/Append/</h2>
 
     <div id="div-id"></div>
 
@@ -19,7 +19,100 @@
       <li id="list-5" class="list-class">Squirtel</li>
     </ul>
 
+    <ul id="menu">
+      <li id="Homepage">Homepage</li>
+      <li id="Services">Services</li>
+      <li id="About">About</li>
+      <li id="Contact">Contact</li>
+    </ul>
+
+    <ul id="menu12">
+      <li id="Homepage12">Homepage12</li>
+      <li id="Services12">Services12</li>
+      <li id="About12">About12</li>
+      <li id="Contact12">Contact12</li>
+    </ul>
+
     <script>
+      /**
+       * insertAfter() : add any element after the other element
+       */
+      const menuId1 = document.querySelector("#menu12");
+      const about = document.querySelector("#About12");
+      const newLi = document.createElement("li");
+      newLi.id = "Portfolio";
+      newLi.className = "Portfolio";
+      newLi.style.color = "blue";
+
+      menuId1.insertAfter(newLi, about);
+
+      //----------------------
+      /**
+       * ReplaceChild() : to replace any element with other element
+       */
+      const menuId = document.querySelector("#menu");
+      const servicesId = document.querySelector("#Services");
+      // const newServices = document.createElement("ul");
+      // const newServicesSpa = document.createElement("li");
+      // newServicesSpa.innerText = "Spa";
+      // const newServicesBleach = document.createElement("li");
+      // newServicesBleach.innerText = "Bleach";
+      // newServices.append(newServicesSpa);
+      // newServices.append(newServicesBleach);
+
+      // menuId.replaceChild(newServices, servicesId);
+
+      //---------------
+      // ReplaceChild() : to replace any element with other element using innerHTML =''
+      //---------------
+      const servicesWithSpan = document.createElement("span");
+      servicesWithSpan.innerHTML = `
+      <ul id = services-salon>
+<li>Spa</li>
+<li>Bleach</li>
+<li>Foundation</li>
+<ul id = services-salon>
+<li>Spa</li>
+<li>Bleach</li>
+<li>Foundation</li>
+       </ul>
+       </ul>
+       `;
+      menuId.replaceChild(servicesWithSpan, servicesId);
+
+      /**
+       * cloneNode() : to clone any element
+       */
+      const clonedMenu = menuId.cloneNode(true);
+      clonedMenu.className = "cloned";
+
+      clonedMenu.style.backgroundColor = "yellow";
+
+      const emptyDiv = document.getElementById("div-id");
+      emptyDiv.append(clonedMenu);
+
+      // // cloning H2
+      // const h2Tag = document.querySelectorAll(".h2Tag");
+      // const pokemonList = document.querySelector("#id-list");
+
+      // const clonedH2 = h2Tag[0].cloneNode(true);
+      // pokemonList.append(clonedH2);
+
+      /**
+       * Removing any Node from the DOM
+       *
+       */
+      const parent_menu = document.querySelector("#menu");
+      const child_to_remove = document.querySelector("#Contact");
+      parent_menu.removeChild(child_to_remove);
+
+      // removing h2 tag
+      const h2Tag = document.querySelectorAll(".h2Tag");
+      const body = document.querySelector("body");
+      console.log(body);
+      body.removeChild(h2Tag[0]);
+
+      //---------------------
       const getUL = document.getElementById("id-list");
 
       let magikarp = document.createElement("li");
