@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100&family=Oswald:wght@300&family=Roboto+Slab:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>figma project</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        /* background-color: aquamarine; */
+      }
+      html {
+        /* font-size: 62.5%; */
+        font-family: "Oswald", sans-serif;
+      }
+      .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(126, 194, 221);
+        height: 100vh;
+      }
+      .button {
+        display: block;
+        height: 3rem;
+        width: 14rem;
+        margin-top: 4rem;
+      }
+      .heading {
+        width: 19rem;
+        height: 11rem;
+        margin-right: 17rem;
+      }
+      p {
+        margin-top: 1rem;
+        color: rgb(51, 51, 92);
+      }
+      #enter-button {
+        font-size: large;
+        background-color: white;
+        height: 3rem;
+        width: 14rem;
+        border: none;
+        border-radius: 2rem;
+        font-weight: 500;
+      }
+      #contact-button {
+        font-size: large;
+        background-color: black;
+        height: 3rem;
+        width: 14rem;
+        border: none;
+        border-radius: 2rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        color: white;
+        cursor: pointer;
+      }
+      #have {
+        color: rgb(51, 51, 92);
+      }
+      #queries {
+        color: white;
+      }
+      img {
+        height: 18rem;
+        width: 22rem;
+        margin-left: 18rem;
+        margin-top: 7rem;
+      }
+      /* media queries */
+      @media (max-width: 320px) {
+        .main {
+          display: block;
+          background-color: bisque;
+          width: fit-content;
+          height: auto;
+          align-items: center;
+          height: 50rem;
+        }
+        img {
+          height: 8rem;
+          width: 10rem;
+          margin-left: 4rem;
+          margin-top: 0.7rem;
+        }
+        .button {
+          display: block;
+          height: 1.5rem;
+          width: 8rem;
+          margin-top: 3rem;
+          margin-left: 2rem;
+        }
+        .heading {
+          width: 14rem;
+          height: 8rem;
+          margin-left: 2rem;
+        }
+        p {
+          margin-top: 0.5rem;
+          color: rgb(51, 51, 92);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="image">
+        <img src="logo-7.svg" alt="logo" />
+      </div>
+      <div class="main-div-2">
+        <div class="heading">
+          <h1 id="have">Have <span id="queries"> Queries ?</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet, Consectetur adipiscing elit.Aliquem
+            eleifend gravinda justo,A fini bus libero ultricesnec integer et
+            massa felis
+          </p>
+        </div>
+        <div class="button">
+          <input
+            id="enter-button"
+            placeholder="Enter Your E-mail"
+            onmouseenter="onMouseEnter()"
+            onmouseleave="onMouseLeave()"
+          />
+          <!-- onmouseover="onMouseOver()"
+          onmouseout="onMouseOut()" -->
+
+          <button id="contact-button" onclick="onButtonClick()">
+
+          <button id="contact-button">Contact with us</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // widely used events
+      // 1. onclick()  --> onclick='eventName()'
+      // 2. ondblclick()
+      // 3. onmouseover()
+      // 4. onmouseout()
+      // 5. onmouseenter()
+      let isButtonClick = false;
+      const mainDiv = document.querySelectorAll(".main");
+      const buttonId = document.getElementById("contact-button");
+
+      document.addEventListener("mouseover", function onButtonClick() {
+        console.log("here", isButtonClick);
+        isButtonClick = !isButtonClick; // == true
+
+        if (isButtonClick) {
+          mainDiv[0].style.backgroundColor = "pink";
+        }
+
+        if (!isButtonClick) {
+          mainDiv[0].style.backgroundColor = "blue";
+        }
+      });
+
+      /**
+       * @description: Handling Button Click
+       */
+      //   const onButtonClick = () => {
+      //     console.log("here", isButtonClick);
+      //     isButtonClick = !isButtonClick; // == true
+
+      //     if (isButtonClick) {
+      //       mainDiv[0].style.backgroundColor = "pink";
+      //     }
+
+      //     if (!isButtonClick) {
+      //       mainDiv[0].style.backgroundColor = "blue";
+      //     }
+      //   };
+
+      /**
+       * Function to double click mouse button
+       */
+      //   function onDoubleButtonClick() {
+      //     console.log("here", isButtonClick);
+      //     // isButtonClick = !isButtonClick; // == true
+
+      //     // if (isButtonClick) {
+      //     //   mainDiv[0].style.backgroundColor = "orange";
+      //     // }
+
+      //     // if (!isButtonClick) {
+      //     //   mainDiv[0].style.backgroundColor = "blue";
+      //     // }
+      //   }
+
+      /**
+       * handling mouse enter on any element
+       */
+      //   function onMouseEnter() {
+      //     console.log("onMouseEnter");
+      //     mainDiv[0].style.backgroundColor = "lime";
+      //   }
+
+      //   /**
+      //    * handling mouse leaves on any element
+      //    */
+      //   function onMouseLeave() {
+      //     console.log("onMouseLeave");
+      //     mainDiv[0].style.backgroundColor = "yellow";
+      //   }
+
+      //   /**
+      //    * @description: Handling Button Click
+      //    */
+      //   const onmouseenter = () => {
+      //     mainDiv[0].style.backgroundColor = "red";
+      //     buttonId.style.backgroundColor = "white";
+      //     buttonId.style.color = "red";
+      //     buttonId.style.transform = "scale(0.8)";
+      //   };
+
+      //   /**
+      //    * @description: Handling Button Click
+      //    */
+      //   const onMouseOut = () => {
+      //     mainDiv[0].style.backgroundColor = "green";
+      //     buttonId.style.backgroundColor = "blue";
+      //     buttonId.style.color = "white";
+      //     buttonId.style.transform = "scale(1.2)";
+      //   };
+    </script>
+  </body>
+</html>
