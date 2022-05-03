@@ -44,7 +44,7 @@
         margin-top: 1rem;
         color: rgb(51, 51, 92);
       }
-      #enter-button {
+      #enter-button-1, #enter-button-2 {
         font-size: large;
         background-color: white;
         height: 3rem;
@@ -53,7 +53,7 @@
         border-radius: 2rem;
         font-weight: 500;
       }
-      #contact-button {
+      #contact-button-1, #contact-button-2 {
         font-size: large;
         background-color: black;
         height: 3rem;
@@ -126,19 +126,37 @@
             massa felis
           </p>
         </div>
+
+     
         <div class="button">
           <input
-            id="enter-button"
+          id="enter-button-1"
+          placeholder="Enter Your E-mail"
+         "
+        />
+          <!-- <input
+            id="enter-button-2"
+            placeholder="Enter Your E-mail"
+            onchange="handleOnChangeInput()"/> -->
+
+
+          <!-- <input
+            id="enter-button-2"
             placeholder="Enter Your E-mail"
             onmouseenter="onMouseEnter()"
             onmouseleave="onMouseLeave()"
-          />
+          /> -->
           <!-- onmouseover="onMouseOver()"
           onmouseout="onMouseOut()" -->
 
-          <button id="contact-button" onclick="onButtonClick()">
+          <input
+          id="enter-button-2"
+          placeholder="Enter Your E-mail"       
+          />
 
-          <button id="contact-button">Contact with us</button>
+          <button id="contact-button-1" onclick="onButtonClick()">
+
+          <button id="contact-button-2">Contact with us</button>
         </div>
       </div>
     </div>
@@ -152,9 +170,15 @@
       // 5. onmouseenter()
       let isButtonClick = false;
       const mainDiv = document.querySelectorAll(".main");
-      const buttonId = document.getElementById("contact-button");
+      const buttonId = document.getElementById("contact-button-1");
+      const inputElement = document.getElementById('enter-button-1')
+      const inputElement2 = document.getElementById('enter-button-2')
 
-      document.addEventListener("mouseover", function onButtonClick() {
+
+      /**
+       * Adding event with add event listener
+      */
+      buttonId.addEventListener("mouseover", function onButtonClick() {
         console.log("here", isButtonClick);
         isButtonClick = !isButtonClick; // == true
 
@@ -166,6 +190,45 @@
           mainDiv[0].style.backgroundColor = "blue";
         }
       });
+
+      /**
+       * onChange event on input tag
+      */
+      inputElement.addEventListener('change', function handleChange (e) {
+        console.log('here', e.target.value)
+      })
+
+      /**
+       * key events (onkeydown, onkeyup, onkeypress)
+      */
+     // keypress
+      inputElement2.addEventListener('keypress', function(event){
+        if(event.key !== 'y' || event.key !== 'Y' || event.key !== 'n' || event.key !== 'N') return
+        console.log('keypress', event.key )
+
+        if(event.key == 'y' || event.key == 'Y'){
+          console.log('you pressed Yes')
+        }
+        if(event.key == 'n' || event.key == 'N'){
+          console.log('you pressed NO')
+        }
+
+      })
+
+      // inputElement2.addEventListener('keydown', function(event){
+      //   console.log('keydown', event)
+      // })
+
+      // inputElement2.addEventListener('keyup', function(event){
+      //   console.log('keyup', event)
+      // })
+
+      /**
+       * onchange event using onchange function
+      */
+//       inputElement2.onchange= function (event) {
+// console.log('events', event)
+//       }
 
       /**
        * @description: Handling Button Click
