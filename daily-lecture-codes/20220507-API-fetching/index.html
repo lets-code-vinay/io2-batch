@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Countries</title>
+  </head>
+  <style>
+    .countries {
+      background-color: "red";
+      height: 500px;
+      border: 1px solid black;
+      width: 50%;
+      margin: auto;
+      margin-top: 10px;
+    }
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196f3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196f3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input type="checkbox" />
+
+          <span class="slider round" onclick="btnToggleClick()"></span>
+        </label>
+
+        <div class="col countries" style="width: 100%; height: 90vh; background-color: red;">
+          <input type="text" placeholder="Search" id="input" value="" />
+
+          <input
+            type="button"
+            value="Search"
+            id="button"
+            onclick="btnClick()"
+          />
+          <div class="countriesPage" style="width: 600px; height: 400px; background-color: white;">
+          
+          </div>
+          
+          
+          
+          Country Name : <h5 class="countryName" style="width: 600px; height: 400px; background-color: Blue;"></h5>
+          
+      </div>
+    </div>
+  </body>
+  <script>
+    let countries = document.querySelectorAll(".countries");
+    let countriesPage = document.querySelectorAll('.countriesPage')
+    let countryName = document.querySelectorAll('.countryName')
+    countries[0].style.backgroundColor = "red";
+
+    let isToggle = false;
+    let loader = true;
+
+    const btnToggleClick = () => {
+      isToggle = !isToggle;
+
+      if (isToggle) {
+        countries[0].style.backgroundColor = "blue";
+      }
+
+      if (!isToggle) {
+        countries[0].style.backgroundColor = "red";
+      }
+    };
+
+
+    const btnClick = () => {
+      let inputValue = document.getElementById("input").value;
+      console.log(inputValue);
+
+      const API = `https://restcountries.com/v3.1/name/${inputValue}?fullText=true`;
+      const data = fetch(API)
+        .then((res) => res.json())
+        .then((data) => {
+          
+        //   if(loader){
+        //     countries[0].innerHTML= `
+        //     <span class="sr-only">Loading...</span>
+        //   <div class="spinner-border text-success" role="status"></div>
+        // </div>
+        //     `
+        //   }
+
+          if(data)loader = false
+          console.log("data", data);
+
+          console.log("normal", data[0]?.flags?.svg); // ok Optional Chaining ==> ES2020
+          // array destructuring
+
+          const [firstElement = []] = data || [];
+          const { flags: { svg: newSvg = "" } = {}, name:{ common =''} = {} } = firstElement || {};
+
+          countriesPage[0].innerHTML = `<img src=${newSvg} alt='country flag' style='width=100%; height:100%'/>`
+          countryName[0].innerText = `${common}`
+          console.log("array destructure", newSvg);
+        });
+    };
+  </script>
+</html>
