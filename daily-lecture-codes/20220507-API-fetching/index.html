@@ -87,85 +87,127 @@
   <body>
     <div class="container">
       <div class="row">
-        <!-- Rounded switch -->
-        <label class="switch">
-          <input type="checkbox" />
-
-          <span class="slider round" onclick="btnToggleClick()"></span>
-        </label>
-
-        <div class="col countries" style="width: 100%; height: 90vh; background-color: red;">
-          <input type="text" placeholder="Search" id="input" value="" />
-
-          <input
-            type="button"
-            value="Search"
-            id="button"
-            onclick="btnClick()"
-          />
-          <div class="countriesPage" style="width: 600px; height: 400px; background-color: white;">
-          
+        <div
+          class="col-md-6 col-lg-6 countries"
+          style="height: 90vh; background-color: red"
+        >
+          <div class="topbar" style="padding: 10px">
+            <input type="text" placeholder="Search" id="input" value="" />
+            <input
+              type="button"
+              value="Search"
+              id="button"
+              onclick="btnClick()"
+            />
+            <!-- Rounded switch -->
+            <label class="switch" style="height: 30px">
+              <input type="checkbox" />
+              <span class="slider round" onclick="btnToggleClick()"></span>
+            </label>
           </div>
-          
-          
-          
-          Country Name : <h5 class="countryName" style="width: 600px; height: 400px; background-color: Blue;"></h5>
-          
+
+          <div
+            class="countriesPage"
+            style="
+              height: 400px;
+              background-color: white;
+              border: 1px solid white;
+              border-radius: 10px;
+              padding: 10px;
+            "
+          ></div>
+          <h1 id="countryName" style="margin-left: 35%; color: white"></h1>
+        </div>
+        <div
+          class="col-md-6 col-lg-6 rightSide"
+          style="
+            background-color: grey;
+            border: 1px solid blue;
+            height: 90vh;
+            margin-top: 10px;
+          "
+        >
+          <div class="detail"></div>
+        </div>
       </div>
     </div>
-  </body>
-  <script>
-    let countries = document.querySelectorAll(".countries");
-    let countriesPage = document.querySelectorAll('.countriesPage')
-    let countryName = document.querySelectorAll('.countryName')
-    countries[0].style.backgroundColor = "red";
+    <script>
+      let countries = document.querySelectorAll(".countries");
+      let rightSide = document.querySelectorAll(".rightSide");
+      let countriesPage = document.querySelectorAll(".countriesPage");
+      let countryName = document.querySelector("#countryName");
+      let detail = document.querySelectorAll(".detail");
 
-    let isToggle = false;
-    let loader = true;
+      let isToggle = false;
+      let loader = true;
 
-    const btnToggleClick = () => {
-      isToggle = !isToggle;
+      const btnToggleClick = () => {
+        isToggle = !isToggle;
 
-      if (isToggle) {
-        countries[0].style.backgroundColor = "blue";
-      }
+        if (isToggle) {
+          countries[0].style.backgroundColor = "blue";
+          rightSide[0].style.backgroundColor = "red";
+          rightSide[0].style.color = "white";
+        }
 
-      if (!isToggle) {
-        countries[0].style.backgroundColor = "red";
-      }
-    };
+        if (!isToggle) {
+          countries[0].style.backgroundColor = "red";
+          rightSide[0].style.backgroundColor = "blue";
+          rightSide[0].style.color = "yellow";
+        }
+      };
 
+      const btnClick = () => {
+        let inputValue = document.getElementById("input").value;
+        console.log(inputValue);
 
-    const btnClick = () => {
-      let inputValue = document.getElementById("input").value;
-      console.log(inputValue);
+        const API = `https://restcountries.com/v3.1/name/${inputValue}?fullText=true`;
+        const data = fetch(API)
+          .then((res) => res.json())
+          .then((data) => {
+            //   if(loader){
+            //     countries[0].innerHTML= `
+            //     <span class="sr-only">Loading...</span>
+            //   <div class="spinner-border text-success" role="status"></div>
+            // </div>
+            //     `
+            //   }
 
-      const API = `https://restcountries.com/v3.1/name/${inputValue}?fullText=true`;
-      const data = fetch(API)
-        .then((res) => res.json())
-        .then((data) => {
+            if (data) loader = false;
+            console.log("data", data);
+
+            console.log("normal", data[0]?.flags?.svg); // ok Optional Chaining ==> ES2020
+            // array destructuring
+
+            const [firstElement = []] = data || [];
+            const {
+              flags: { svg: newSvg = "" } = {},
+              name: { common = "" } = {},
+              capital = [],
+              continents = [],
+              languages: {},
+            } = firstElement || {};
+            console.log("language", languages);
+
+            countriesPage[0].innerHTML = `<img src=${newSvg} alt='country flag' style='width:100% !important; height:100%'/>`;
+            countryName.innerText = `${common}`;
+
+            detail[0].innerHTML = `
+            <div class="nameOfCountry"><p>Country Name:</p><h4>${common}</h4></div>
+            <div class="nameOfCountry"><p>Capital Name:</p><h4>${capital.map(
+              (cap) => cap
+            )}</h4></div>
           
-        //   if(loader){
-        //     countries[0].innerHTML= `
-        //     <span class="sr-only">Loading...</span>
-        //   <div class="spinner-border text-success" role="status"></div>
-        // </div>
-        //     `
-        //   }
 
-          if(data)loader = false
-          console.log("data", data);
+            <div class="nameOfCountry"><p>Continent:</p><h4>${continents.map(
+              (continent) => continent
+            )}</h4></div>
 
-          console.log("normal", data[0]?.flags?.svg); // ok Optional Chaining ==> ES2020
-          // array destructuring
-
-          const [firstElement = []] = data || [];
-          const { flags: { svg: newSvg = "" } = {}, name:{ common =''} = {} } = firstElement || {};
-
-          countriesPage[0].innerHTML = `<img src=${newSvg} alt='country flag' style='width=100%; height:100%'/>`
-          countryName[0].innerText = `${common}`
-          console.log("array destructure", newSvg);
-        });
-    };
-  </script>
+            `;
+          });
+        // <h4 class="nameOfCountry">Continent:${}</h4>
+        // <h4 class="nameOfCountry">Language:${}</h4>
+      };
+    </script>
+  </body>
 </html>
