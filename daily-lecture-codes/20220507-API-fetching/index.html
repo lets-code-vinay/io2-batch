@@ -110,7 +110,7 @@
             class="countriesPage"
             style="
               height: 400px;
-              background-color: white;
+              background-color: black;
               border: 1px solid white;
               border-radius: 10px;
               padding: 10px;
@@ -158,55 +158,63 @@
       };
 
       const btnClick = () => {
-        let inputValue = document.getElementById("input").value;
-        console.log(inputValue);
+        try {
+          let inputValue = document.getElementById("input").value;
+          console.log(inputValue);
 
-        const API = `https://restcountries.com/v3.1/name/${inputValue}?fullText=true`;
-        const data = fetch(API)
-          .then((res) => res.json())
-          .then((data) => {
-            //   if(loader){
-            //     countries[0].innerHTML= `
-            //     <span class="sr-only">Loading...</span>
-            //   <div class="spinner-border text-success" role="status"></div>
-            // </div>
-            //     `
-            //   }
+          const API = `https://restcountries.com/v3.1/name/${inputValue}`;
+          const data = fetch(API)
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("data", data);
 
-            if (data) loader = false;
-            console.log("data", data);
+              // array destructuring
+              const [firstElement = []] = data || [];
+              const {
+                flags: { svg: newSvg = "" } = {},
+                name: { common = "" } = {},
+                capital = [],
+                continents = [],
+                languages = {},
+                translations = {},
+              } = firstElement || {};
+              const transLateData = Object.values(translations);
 
-            console.log("normal", data[0]?.flags?.svg); // ok Optional Chaining ==> ES2020
-            // array destructuring
+              countriesPage[0].innerHTML = `<img src=${newSvg} alt='country flag' style='width:100% !important; height:100%'/>`;
+              countryName.innerText = `${common}`;
 
-            const [firstElement = []] = data || [];
-            const {
-              flags: { svg: newSvg = "" } = {},
-              name: { common = "" } = {},
-              capital = [],
-              continents = [],
-              languages: {},
-            } = firstElement || {};
-            console.log("language", languages);
-
-            countriesPage[0].innerHTML = `<img src=${newSvg} alt='country flag' style='width:100% !important; height:100%'/>`;
-            countryName.innerText = `${common}`;
-
-            detail[0].innerHTML = `
+              detail[0].innerHTML = `
             <div class="nameOfCountry"><p>Country Name:</p><h4>${common}</h4></div>
-            <div class="nameOfCountry"><p>Capital Name:</p><h4>${capital.map(
+
+            <div class="capitalname"><p>Capital Name:</p><h4>${capital.map(
               (cap) => cap
             )}</h4></div>
-          
 
-            <div class="nameOfCountry"><p>Continent:</p><h4>${continents.map(
+            <div class="nameOfContinent"><p>Continent:</p><h4>${continents.map(
               (continent) => continent
             )}</h4></div>
+            <div class="listOfLanguages"><p>Languages:</p><h4>${Object.values(
+              languages
+            ).map((lang) => lang)}</h4></div>
 
+            <div class="translations">
+              <p>Translations:</p>
+              ${transLateData.map((data) => {
+                `<h5>Common:</h5><h4>${data.common}</h4>`;
+              })}
+
+              ${transLateData.map((data) => {
+                `<h5>Official:</h5><h4>${data.official}</h4>`;
+              })}
+
+            
+
+            </div>
             `;
-          });
-        // <h4 class="nameOfCountry">Continent:${}</h4>
-        // <h4 class="nameOfCountry">Language:${}</h4>
+            });
+        } catch (error) {
+          console.error(error);
+        }
       };
     </script>
   </body>
