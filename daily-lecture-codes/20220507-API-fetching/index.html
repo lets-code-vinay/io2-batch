@@ -200,15 +200,8 @@
             <div class="translations">
               <p>Translations:</p>
               ${transLateData.map((data) => {
-                `<h5>Common:</h5><h4>${data.common}</h4>`;
+                return `<h6>Common:</h6><h6>${data.common}</h6> <h6>Official:</h6><h6>${data.official}</h6>`;
               })}
-
-              ${transLateData.map((data) => {
-                `<h5>Official:</h5><h4>${data.official}</h4>`;
-              })}
-
-            
-
             </div>
             `;
             });

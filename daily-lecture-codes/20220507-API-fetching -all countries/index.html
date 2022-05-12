@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Countries</title>
+  </head>
+  <style></style>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 countries">
+          <input
+            type="button"
+            class="buttonCont"
+            value="All Countries"
+            onclick="getAllCountries()"
+          />
+          <div
+            class="allCountries"
+            style="display: flex; flex-wrap: wrap"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const [allCountries = []] =
+        document.getElementsByClassName("allCountries");
+
+      const getAllCountries = async () => {
+        console.log("getAllCountries");
+        const API = `https://restcountries.com/v3.1/all`;
+        let data = await fetch(API);
+        data = await data.json();
+
+        console.log("data", data);
+
+        allCountries.innerHTML = `
+        ${data.map((country, index) => {
+          return ` <div class="card" style="width: 15rem">
+            <img class="card-img-top" src=${country?.flags?.svg} alt=${
+            country?.name?.common
+          } />
+            <div class="card-body">
+              <h5 class="card-title">${country?.name?.common}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Capital:${
+                Array.isArray(country?.capital)
+                  ? country?.capital.map((cap) => {
+                      return cap;
+                    })
+                  : country?.capital || "No capital"
+              }</li>
+              <li class="list-group-item">Languages:${
+                Object.values(country?.languages || []).map((lang) => lang) ||
+                "No language found"
+              }</li>
+              <li class="list-group-item">Population:${country.population}</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">
+                Go to Country
+              </a>
+            </div>
+          </div>`;
+        })}
+          `;
+      };
+    </script>
+  </body>
+</html>
