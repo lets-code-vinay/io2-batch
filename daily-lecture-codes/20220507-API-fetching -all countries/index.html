@@ -41,6 +41,16 @@
         data = await data.json();
 
         console.log("data", data);
+        /**
+         * Local storage: to save data, get Data , delete data
+         */
+
+        // Save data in local storage
+        window.localStorage.setItem("API_DATA", "vinay-any name");
+        console.log(window.localStorage.getItem("API_DATA"));
+        setTimeout(() => {
+          window.localStorage.clear();
+        }, 3000);
 
         allCountries.innerHTML = `
         ${data.map((country, index) => {
@@ -66,13 +76,23 @@
               <li class="list-group-item">Population:${country.population}</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">
+              <button  class="card-link-button" >
                 Go to Country
-              </a>
+              </button>
             </div>
           </div>`;
         })}
           `;
+
+        setTimeout(() => {
+          const button = document.getElementsByClassName("card-link-button");
+          const buttonClick = button.addEventListener("click", onButtonClick());
+          console.log("buttonClick", buttonClick);
+
+          const onButtonClick = (e) => {
+            console.log("buttonClick", e);
+          };
+        }, 5000);
       };
     </script>
   </body>
