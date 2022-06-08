@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import crossIcon from "../../Assets/Images/cross.png";
 
-const LoginTitle = ({ title = "Sign up", titleColor = "blue" }) => {
+const LoginTitle = ({
+  title = "Sign up",
+  titleColor = "blue",
+  onNamePrint,
+}) => {
+  const [name, setName] = useState("Ravi");
+
+  onNamePrint(name);
   return (
     <>
       <div className="sign-up-title">
