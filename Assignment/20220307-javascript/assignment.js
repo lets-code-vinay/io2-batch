@@ -1,6 +1,6 @@
 /**
  * 1.
- * If lenghts of three sides of a triangle are input through the keyboard
+ * If lengths of three sides of a triangle are input through the keyboard
  * write a program to find the area of the triangle using Heron's formula
  * Formula:
  *  semi-perimeter = s =(a + b + c)/2
@@ -9,9 +9,9 @@
 
 /**
  * 2. The current year and the year in which the employee joined
- * the organisation are entered through the keyboard .
+ * the organization are entered through the keyboard .
  * If the number of years for which the employee has served
- * the organisation is greater than 3 years then the bonus of
+ * the organization is greater than 3 years then the bonus of
  * Rs.2500/- is given to the employee.
  * If the years of service is not greater than 3,
  * then the program should not do anything.
@@ -31,11 +31,11 @@
 /**
  * 4.if cost price and selling price of an item are input through the keyboard,
  * write a program to determine whether the seller has made profit of incurred loss.
- * Also determine how much profite he made or loss he incurred
+ * Also determine how much profit he made or loss he incurred
  */
 
 /**
- * 5. Any integar is input through the keyboard. Write program to find out
+ * 5. Any integer is input through the keyboard. Write program to find out
  * whether it is an odd Number or even Number
  */
 
@@ -52,7 +52,7 @@
 
 /**
  * 8. Write a program to find the triangle is valid or not, when the three angle of a triangle
- * entered through the keyoard. A triangle is valid if all the three angles is equal to 180 degrees.
+ * entered through the keyboard. A triangle is valid if all the three angles is equal to 180 degrees.
  */
 
 /**

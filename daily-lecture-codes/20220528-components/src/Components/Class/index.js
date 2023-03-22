@@ -1,35 +1,10 @@
 import React, { Component, useState } from "react";
-
-export function MyComp() {
-  return (
-    <>
-      <h3>Hello function Traditional</h3>
-    </>
-  );
-}
+import axios from "axios";
 
 const TraditionalComp = () => {
-  const [comp, setComp] = useState("sunil");
-
-  function handleButtonClick(e) {
-    console.log("hello", e);
-  }
-
-  const handleNameChange = (e) => {
-    console.log(e.target.value);
-    setComp(`${comp}${e.target.value}`);
-  };
-
   return (
     <>
-      <h3>{comp} ES6 Function based Component</h3>
-      <input type="button" onClick={handleButtonClick} value="Click here" />
-      <input
-        type="text"
-        onChange={handleNameChange}
-        value={comp}
-        placeholder="Enter any name"
-      />
+      <h3> ES6 Function based Component</h3>
     </>
   );
 };
@@ -42,30 +17,26 @@ export class ClassComp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "vinay",
-      className: "2nd",
-      age: "5",
+      data: [],
+      abc: {},
     };
   }
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ age: "10", name: "Sunil" });
-    }, 5000);
-  }
+
+  componentDidMount = () => {
+    axios
+      .get("https://reqres.in/api/users?page=2")
+      .then((res) =>
+        this.setState({ data: res }, () =>
+          console.log("data 1", this.state.data)
+        )
+      );
+    console.log("data 2", this.state.data);
+  };
 
   render() {
-    console.log("inside render", this.state);
-
-    console.log("this", this);
-
-    const { name = "", age = 0, className = "" } = this.state || {};
-
     return (
       <>
-        <h3>
-          My name is {name}. I am {age} years old and i read in {className}{" "}
-          class.
-        </h3>
+        <h3>This is Class based component</h3>
       </>
     );
   }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TraditionalComp, { ClassComp, MyComp } from "../../Components/Class";
+import TraditionalComp, { ClassComp } from "../../Components/Class";
 import InputBox from "../../Components/InputBox";
 import LoginSubtitle from "../../Components/LoginSubtitle";
 import LoginTitle from "../../Components/LoginTitle";
@@ -10,13 +10,11 @@ const FacebookLogin = () => {
   const [dob, SetDOB] = useState("Date of Birth2");
 
   const namePrint = (data) => {
-    console.log("data", data);
     SetDOB(data);
   };
 
   return (
     <>
-      <MyComp />
       <TraditionalComp />
       <ClassComp />
       <div className="fb-signup-div">

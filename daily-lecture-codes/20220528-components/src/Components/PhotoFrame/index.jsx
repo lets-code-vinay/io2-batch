@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Child from "../../Assets/Images/child.jpg";
 
 const PhotoFrame = (props) => {
-  console.log(props);
   const { myName = "" } = props || {};
   const [name, setName] = useState("Ravi");
 
